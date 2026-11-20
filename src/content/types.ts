@@ -67,7 +67,8 @@ export function t(copy: Copy, lang: Lang): string {
 
 export function localizePath(pathname: string, lang: Lang): string {
   const parts = pathname.split("/").filter(Boolean);
-  if (parts[0] === "en" || parts[0] === "zh-tw") parts[0] = lang;
-  else parts.unshift(lang);
+  const index = parts.findIndex((part) => part === "en" || part === "zh-tw");
+  if (index >= 0) parts[index] = lang;
+  else parts.push(lang);
   return `/${parts.join("/")}`;
 }

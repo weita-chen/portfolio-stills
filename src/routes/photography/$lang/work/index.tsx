@@ -4,16 +4,16 @@ import { site } from "@/content/site";
 import { isLang, t, type Lang } from "@/content/types";
 import { pageHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/$lang/work/")({
+export const Route = createFileRoute("/photography/$lang/work/")({
   head: ({ params }) => {
     const lang: Lang = isLang(params.lang) ? params.lang : "en";
     return pageHead({
       title: `${t(site.workLabel, lang)} — ${site.name}`,
       description: t(site.workIntro, lang),
-      path: `/${lang}/work`,
+      path: `/photography/${lang}/work`,
       lang,
-      enPath: "/en/work",
-      zhPath: "/zh-tw/work",
+      enPath: "/photography/en/work",
+      zhPath: "/photography/zh-tw/work",
     });
   },
   component: WorkPage,

@@ -315,7 +315,7 @@ function Tile({
     (project.awaiting ? t(site.forthcoming, lang) : "");
   return (
     <Link
-      to="/$lang/work/$slug"
+      to="/photography/$lang/work/$slug"
       params={{ lang, slug: project.slug }}
       className="work-tile"
     >

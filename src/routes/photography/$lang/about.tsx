@@ -6,16 +6,16 @@ import { experience, site } from "@/content/site";
 import { isLang, t, type Lang } from "@/content/types";
 import { pageHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/$lang/about")({
+export const Route = createFileRoute("/photography/$lang/about")({
   head: ({ params }) => {
     const lang: Lang = isLang(params.lang) ? params.lang : "en";
     return pageHead({
       title: `${t(site.aboutLabel, lang)} — ${site.name}`,
       description: t(site.aboutBio, lang),
-      path: `/${lang}/about`,
+      path: `/photography/${lang}/about`,
       lang,
-      enPath: "/en/about",
-      zhPath: "/zh-tw/about",
+      enPath: "/photography/en/about",
+      zhPath: "/photography/zh-tw/about",
     });
   },
   component: AboutPage,
@@ -47,10 +47,10 @@ function AboutPage() {
             )}
           </div>
           <p className="stack-links">
-            <Link className="cta" to="/$lang/work" params={{ lang: current }}>
+            <Link className="cta" to="/photography/$lang/work" params={{ lang: current }}>
               {t(site.viewWork, current)}
             </Link>
-            <Link className="cta cta-quiet" to="/$lang/contact" params={{ lang: current }}>
+            <Link className="cta cta-quiet" to="/photography/$lang/contact" params={{ lang: current }}>
               {t(site.contactCta, current)}
             </Link>
           </p>

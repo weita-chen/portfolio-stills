@@ -56,7 +56,7 @@ export function ProjectView({ project, lang }: { project: Project; lang: Lang })
       })}
       <nav className="project-nav" aria-label={lang === "zh-tw" ? "其他作品" : "Other projects"}>
         {prev ? (
-          <Link to="/$lang/work/$slug" params={{ lang, slug: prev.slug }}>
+          <Link to="/photography/$lang/work/$slug" params={{ lang, slug: prev.slug }}>
             <span>{t(site.previous, lang)}</span>
             <strong>{t(prev.title, lang)}</strong>
           </Link>
@@ -64,7 +64,7 @@ export function ProjectView({ project, lang }: { project: Project; lang: Lang })
           <span />
         )}
         {next ? (
-          <Link className="next" to="/$lang/work/$slug" params={{ lang, slug: next.slug }}>
+          <Link className="next" to="/photography/$lang/work/$slug" params={{ lang, slug: next.slug }}>
             <span>{t(site.next, lang)}</span>
             <strong>{t(next.title, lang)}</strong>
           </Link>

@@ -19,7 +19,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "coral-wellness-hero",
-              src: "/photography/coral-wellness/hero.jpg",
+              src: "/stills/coral-wellness/hero.jpg",
               width: 1176,
               height: 1365,
               alt: { en: "Coral Wellness, cover.", "zh-TW": "Coral Wellness，封面。" },
@@ -27,7 +27,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "coral-wellness-01",
-        src: "/photography/coral-wellness/01.jpg",
+        src: "/stills/coral-wellness/01.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Coral Wellness, photograph 1.", "zh-TW": "Coral Wellness，第 1 張。" },
@@ -35,7 +35,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "coral-wellness-02",
-        src: "/photography/coral-wellness/02.jpg",
+        src: "/stills/coral-wellness/02.jpg",
         width: 2048,
         height: 2048,
         alt: { en: "Coral Wellness, photograph 2.", "zh-TW": "Coral Wellness，第 2 張。" },
@@ -43,7 +43,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "coral-wellness-03",
-        src: "/photography/coral-wellness/03.jpg",
+        src: "/stills/coral-wellness/03.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Coral Wellness, photograph 3.", "zh-TW": "Coral Wellness，第 3 張。" },
@@ -51,7 +51,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "coral-wellness-04",
-        src: "/photography/coral-wellness/04.jpg",
+        src: "/stills/coral-wellness/04.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Coral Wellness, photograph 4.", "zh-TW": "Coral Wellness，第 4 張。" },
@@ -59,7 +59,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "coral-wellness-05",
-        src: "/photography/coral-wellness/05.jpg",
+        src: "/stills/coral-wellness/05.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Coral Wellness, photograph 5.", "zh-TW": "Coral Wellness，第 5 張。" },
@@ -67,7 +67,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "coral-wellness-06",
-        src: "/photography/coral-wellness/06.jpg",
+        src: "/stills/coral-wellness/06.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Coral Wellness, photograph 6.", "zh-TW": "Coral Wellness，第 6 張。" },
@@ -75,7 +75,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "coral-wellness-07",
-        src: "/photography/coral-wellness/07.jpg",
+        src: "/stills/coral-wellness/07.jpg",
         width: 2048,
         height: 1536,
         alt: { en: "Coral Wellness, photograph 7.", "zh-TW": "Coral Wellness，第 7 張。" },
@@ -83,7 +83,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "coral-wellness-08",
-        src: "/photography/coral-wellness/08.jpg",
+        src: "/stills/coral-wellness/08.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Coral Wellness, photograph 8.", "zh-TW": "Coral Wellness，第 8 張。" },
@@ -91,7 +91,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "coral-wellness-09",
-        src: "/photography/coral-wellness/09.jpg",
+        src: "/stills/coral-wellness/09.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Coral Wellness, photograph 9.", "zh-TW": "Coral Wellness，第 9 張。" },
@@ -133,7 +133,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "new-asia-chamber-music-hero",
-              src: "/photography/new-asia-chamber-music/hero.jpg",
+              src: "/stills/new-asia-chamber-music/hero.jpg",
               width: 1059,
               height: 1365,
               alt: { en: "New Asia Chamber Music Society, cover.", "zh-TW": "新亞室內樂協會，封面。" },
@@ -141,7 +141,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "new-asia-chamber-music-01",
-        src: "/photography/new-asia-chamber-music/01.jpg",
+        src: "/stills/new-asia-chamber-music/01.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "New Asia Chamber Music, photograph 1.", "zh-TW": "New Asia Chamber Music，第 1 張。" },
@@ -149,7 +149,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "new-asia-chamber-music-02",
-        src: "/photography/new-asia-chamber-music/02.jpg",
+        src: "/stills/new-asia-chamber-music/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "New Asia Chamber Music, photograph 2.", "zh-TW": "New Asia Chamber Music，第 2 張。" },
@@ -157,7 +157,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "new-asia-chamber-music-03",
-        src: "/photography/new-asia-chamber-music/03.jpg",
+        src: "/stills/new-asia-chamber-music/03.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "New Asia Chamber Music, photograph 3.", "zh-TW": "New Asia Chamber Music，第 3 張。" },
@@ -165,7 +165,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "new-asia-chamber-music-04",
-        src: "/photography/new-asia-chamber-music/04.jpg",
+        src: "/stills/new-asia-chamber-music/04.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "New Asia Chamber Music, photograph 4.", "zh-TW": "New Asia Chamber Music，第 4 張。" },
@@ -173,7 +173,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "new-asia-chamber-music-05",
-        src: "/photography/new-asia-chamber-music/05.jpg",
+        src: "/stills/new-asia-chamber-music/05.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "New Asia Chamber Music, photograph 5.", "zh-TW": "New Asia Chamber Music，第 5 張。" },
@@ -181,7 +181,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "new-asia-chamber-music-06",
-        src: "/photography/new-asia-chamber-music/06.jpg",
+        src: "/stills/new-asia-chamber-music/06.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "New Asia Chamber Music, photograph 6.", "zh-TW": "New Asia Chamber Music，第 6 張。" },
@@ -189,7 +189,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "new-asia-chamber-music-07",
-        src: "/photography/new-asia-chamber-music/07.jpg",
+        src: "/stills/new-asia-chamber-music/07.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "New Asia Chamber Music, photograph 7.", "zh-TW": "New Asia Chamber Music，第 7 張。" },
@@ -232,7 +232,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "us-open-hero",
-              src: "/photography/us-open/hero.jpg",
+              src: "/stills/us-open/hero.jpg",
               width: 2299,
               height: 3264,
               alt: { en: "US Open, cover.", "zh-TW": "美國網球公開賽，封面。" },
@@ -240,7 +240,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "us-open-01",
-        src: "/photography/us-open/01.jpg",
+        src: "/stills/us-open/01.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "US Open, photograph 1.", "zh-TW": "US Open，第 1 張。" },
@@ -248,7 +248,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "us-open-02",
-        src: "/photography/us-open/02.jpg",
+        src: "/stills/us-open/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "US Open, photograph 2.", "zh-TW": "US Open，第 2 張。" },
@@ -256,7 +256,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "us-open-03",
-        src: "/photography/us-open/03.jpg",
+        src: "/stills/us-open/03.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "US Open, photograph 3.", "zh-TW": "US Open，第 3 張。" },
@@ -264,7 +264,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "us-open-04",
-        src: "/photography/us-open/04.jpg",
+        src: "/stills/us-open/04.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "US Open, photograph 4.", "zh-TW": "US Open，第 4 張。" },
@@ -273,7 +273,7 @@ export const addedAlbums: Project[] = [
     ,
       {
               id: "us-open-05",
-              src: "/photography/us-open/05.jpg",
+              src: "/stills/us-open/05.jpg",
               width: 4898,
               height: 3265,
               alt: { en: "US Open, photograph 5.", "zh-TW": "美國網球公開賽，第 5 張。" },
@@ -281,7 +281,7 @@ export const addedAlbums: Project[] = [
             },
       {
               id: "us-open-06",
-              src: "/photography/us-open/06.jpg",
+              src: "/stills/us-open/06.jpg",
               width: 4898,
               height: 3265,
               alt: { en: "US Open, photograph 6.", "zh-TW": "美國網球公開賽，第 6 張。" },
@@ -289,7 +289,7 @@ export const addedAlbums: Project[] = [
             },
       {
               id: "us-open-07",
-              src: "/photography/us-open/07.jpg",
+              src: "/stills/us-open/07.jpg",
               width: 4898,
               height: 3266,
               alt: { en: "US Open, photograph 7.", "zh-TW": "美國網球公開賽，第 7 張。" },
@@ -297,7 +297,7 @@ export const addedAlbums: Project[] = [
             },
       {
               id: "us-open-08",
-              src: "/photography/us-open/08.jpg",
+              src: "/stills/us-open/08.jpg",
               width: 4898,
               height: 3265,
               alt: { en: "US Open, photograph 8.", "zh-TW": "美國網球公開賽，第 8 張。" },
@@ -305,7 +305,7 @@ export const addedAlbums: Project[] = [
             },
       {
               id: "us-open-09",
-              src: "/photography/us-open/09.jpg",
+              src: "/stills/us-open/09.jpg",
               width: 4899,
               height: 3266,
               alt: { en: "US Open, photograph 9.", "zh-TW": "美國網球公開賽，第 9 張。" },
@@ -348,7 +348,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "art-gallery-hero",
-              src: "/photography/art-gallery/hero.jpg",
+              src: "/stills/art-gallery/hero.jpg",
               width: 2319,
               height: 3264,
               alt: { en: "Art & Gallery, cover.", "zh-TW": "藝術與畫廊，封面。" },
@@ -356,7 +356,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "art-gallery-01",
-        src: "/photography/art-gallery/01.jpg",
+        src: "/stills/art-gallery/01.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Art / Gallery, photograph 1.", "zh-TW": "藝術／畫廊，第 1 張。" },
@@ -364,7 +364,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "art-gallery-02",
-        src: "/photography/art-gallery/02.jpg",
+        src: "/stills/art-gallery/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Art / Gallery, photograph 2.", "zh-TW": "藝術／畫廊，第 2 張。" },
@@ -372,7 +372,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "art-gallery-03",
-        src: "/photography/art-gallery/03.jpg",
+        src: "/stills/art-gallery/03.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Art / Gallery, photograph 3.", "zh-TW": "藝術／畫廊，第 3 張。" },
@@ -380,7 +380,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "art-gallery-04",
-        src: "/photography/art-gallery/04.jpg",
+        src: "/stills/art-gallery/04.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Art / Gallery, photograph 4.", "zh-TW": "藝術／畫廊，第 4 張。" },
@@ -388,7 +388,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "art-gallery-05",
-        src: "/photography/art-gallery/05.jpg",
+        src: "/stills/art-gallery/05.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Art / Gallery, photograph 5.", "zh-TW": "藝術／畫廊，第 5 張。" },
@@ -396,7 +396,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "art-gallery-06",
-        src: "/photography/art-gallery/06.jpg",
+        src: "/stills/art-gallery/06.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Art / Gallery, photograph 6.", "zh-TW": "藝術／畫廊，第 6 張。" },
@@ -404,7 +404,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "art-gallery-07",
-        src: "/photography/art-gallery/07.jpg",
+        src: "/stills/art-gallery/07.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Art / Gallery, photograph 7.", "zh-TW": "藝術／畫廊，第 7 張。" },
@@ -412,7 +412,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "art-gallery-08",
-        src: "/photography/art-gallery/08.jpg",
+        src: "/stills/art-gallery/08.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Art / Gallery, photograph 8.", "zh-TW": "藝術／畫廊，第 8 張。" },
@@ -420,7 +420,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "art-gallery-09",
-        src: "/photography/art-gallery/09.jpg",
+        src: "/stills/art-gallery/09.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Art / Gallery, photograph 9.", "zh-TW": "藝術／畫廊，第 9 張。" },
@@ -428,7 +428,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "art-gallery-10",
-        src: "/photography/art-gallery/10.jpg",
+        src: "/stills/art-gallery/10.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Art / Gallery, photograph 10.", "zh-TW": "藝術／畫廊，第 10 張。" },
@@ -436,7 +436,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "art-gallery-11",
-        src: "/photography/art-gallery/11.jpg",
+        src: "/stills/art-gallery/11.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "Art / Gallery, photograph 11.", "zh-TW": "藝術／畫廊，第 11 張。" },
@@ -445,7 +445,7 @@ export const addedAlbums: Project[] = [
     ,
       {
               id: "art-gallery-12",
-              src: "/photography/art-gallery/12.jpg",
+              src: "/stills/art-gallery/12.jpg",
               width: 4898,
               height: 3265,
               alt: { en: "Art & Gallery, photograph 12.", "zh-TW": "藝術與畫廊，第 12 張。" },
@@ -504,7 +504,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "tigerparty-hero",
-              src: "/photography/tigerparty/hero.jpg",
+              src: "/stills/tigerparty/hero.jpg",
               width: 1081,
               height: 1365,
               alt: { en: "Tigerparty, cover.", "zh-TW": "Tigerparty，封面。" },
@@ -512,7 +512,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "commercial-01",
-        src: "/photography/commercial/01.jpg",
+        src: "/stills/commercial/01.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Tigerparty, photograph.", "zh-TW": "Tigerparty 的照片。" },
@@ -551,7 +551,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "trunk-tools-hero",
-              src: "/photography/trunk-tools/hero.jpg",
+              src: "/stills/trunk-tools/hero.jpg",
               width: 1107,
               height: 1365,
               alt: { en: "Trunk Tools, cover.", "zh-TW": "Trunk Tools，封面。" },
@@ -559,7 +559,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "commercial-02",
-        src: "/photography/commercial/02.jpg",
+        src: "/stills/commercial/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Trunk Tools, photograph 1.", "zh-TW": "Trunk Tools，第 1 張。" },
@@ -567,7 +567,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "commercial-03",
-        src: "/photography/commercial/03.jpg",
+        src: "/stills/commercial/03.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Trunk Tools, photograph 2.", "zh-TW": "Trunk Tools，第 2 張。" },
@@ -575,7 +575,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "commercial-04",
-        src: "/photography/commercial/04.jpg",
+        src: "/stills/commercial/04.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Trunk Tools, photograph 3.", "zh-TW": "Trunk Tools，第 3 張。" },
@@ -614,7 +614,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "fest-gala-hero",
-              src: "/photography/fest-gala/hero.jpg",
+              src: "/stills/fest-gala/hero.jpg",
               width: 1017,
               height: 1365,
               alt: { en: "Festivals & Galas, cover.", "zh-TW": "節慶與晚宴，封面。" },
@@ -622,7 +622,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "fest-gala-01",
-        src: "/photography/fest-gala/01.jpg",
+        src: "/stills/fest-gala/01.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Fest / Gala, photograph 1.", "zh-TW": "節慶／晚宴，第 1 張。" },
@@ -630,7 +630,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "fest-gala-02",
-        src: "/photography/fest-gala/02.jpg",
+        src: "/stills/fest-gala/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Fest / Gala, photograph 2.", "zh-TW": "節慶／晚宴，第 2 張。" },
@@ -638,7 +638,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "fest-gala-03",
-        src: "/photography/fest-gala/03.jpg",
+        src: "/stills/fest-gala/03.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Fest / Gala, photograph 3.", "zh-TW": "節慶／晚宴，第 3 張。" },
@@ -646,7 +646,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "fest-gala-04",
-        src: "/photography/fest-gala/04.jpg",
+        src: "/stills/fest-gala/04.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Fest / Gala, photograph 4.", "zh-TW": "節慶／晚宴，第 4 張。" },
@@ -654,7 +654,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "fest-gala-05",
-        src: "/photography/fest-gala/05.jpg",
+        src: "/stills/fest-gala/05.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Fest / Gala, photograph 5.", "zh-TW": "節慶／晚宴，第 5 張。" },
@@ -662,7 +662,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "fest-gala-06",
-        src: "/photography/fest-gala/06.jpg",
+        src: "/stills/fest-gala/06.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Fest / Gala, photograph 6.", "zh-TW": "節慶／晚宴，第 6 張。" },
@@ -671,7 +671,7 @@ export const addedAlbums: Project[] = [
     ,
       {
               id: "fest-gala-07",
-              src: "/photography/fest-gala/07.jpg",
+              src: "/stills/fest-gala/07.jpg",
               width: 4898,
               height: 3265,
               alt: { en: "Festivals & Galas, photograph 7.", "zh-TW": "節慶與晚宴，第 7 張。" },
@@ -712,7 +712,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "jazz-age-lawn-party-hero",
-              src: "/photography/jazz-age-lawn-party/hero.jpg",
+              src: "/stills/jazz-age-lawn-party/hero.jpg",
               width: 1006,
               height: 1365,
               alt: { en: "Jazz Age Lawn Party, cover.", "zh-TW": "Jazz Age Lawn Party，封面。" },
@@ -720,7 +720,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "jazz-age-lawn-party-01",
-        src: "/photography/jazz-age-lawn-party/01.jpg",
+        src: "/stills/jazz-age-lawn-party/01.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "Jazz Age Lawn Party, photograph 1.", "zh-TW": "Jazz Age Lawn Party，第 1 張。" },
@@ -728,7 +728,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "jazz-age-lawn-party-02",
-        src: "/photography/jazz-age-lawn-party/02.jpg",
+        src: "/stills/jazz-age-lawn-party/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Jazz Age Lawn Party, photograph 2.", "zh-TW": "Jazz Age Lawn Party，第 2 張。" },
@@ -736,7 +736,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "jazz-age-lawn-party-03",
-        src: "/photography/jazz-age-lawn-party/03.jpg",
+        src: "/stills/jazz-age-lawn-party/03.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Jazz Age Lawn Party, photograph 3.", "zh-TW": "Jazz Age Lawn Party，第 3 張。" },
@@ -744,7 +744,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "jazz-age-lawn-party-04",
-        src: "/photography/jazz-age-lawn-party/04.jpg",
+        src: "/stills/jazz-age-lawn-party/04.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Jazz Age Lawn Party, photograph 4.", "zh-TW": "Jazz Age Lawn Party，第 4 張。" },
@@ -752,7 +752,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "jazz-age-lawn-party-05",
-        src: "/photography/jazz-age-lawn-party/05.jpg",
+        src: "/stills/jazz-age-lawn-party/05.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Jazz Age Lawn Party, photograph 5.", "zh-TW": "Jazz Age Lawn Party，第 5 張。" },
@@ -760,7 +760,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "jazz-age-lawn-party-06",
-        src: "/photography/jazz-age-lawn-party/06.jpg",
+        src: "/stills/jazz-age-lawn-party/06.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Jazz Age Lawn Party, photograph 6.", "zh-TW": "Jazz Age Lawn Party，第 6 張。" },
@@ -804,7 +804,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "times-square-nye-2025-hero",
-              src: "/photography/times-square-nye-2025/hero.jpg",
+              src: "/stills/times-square-nye-2025/hero.jpg",
               width: 1083,
               height: 1365,
               alt: { en: "New Year's Eve at Times Square, cover.", "zh-TW": "時代廣場跨年，封面。" },
@@ -812,7 +812,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "times-square-nye-2025-01",
-        src: "/photography/times-square-nye-2025/01.jpg",
+        src: "/stills/times-square-nye-2025/01.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "New Year's Eve at Times Square, photograph 1.", "zh-TW": "時代廣場跨年，第 1 張。" },
@@ -820,7 +820,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "times-square-nye-2025-02",
-        src: "/photography/times-square-nye-2025/02.jpg",
+        src: "/stills/times-square-nye-2025/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "New Year's Eve at Times Square, photograph 2.", "zh-TW": "時代廣場跨年，第 2 張。" },
@@ -828,7 +828,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "times-square-nye-2025-03",
-        src: "/photography/times-square-nye-2025/03.jpg",
+        src: "/stills/times-square-nye-2025/03.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "New Year's Eve at Times Square, photograph 3.", "zh-TW": "時代廣場跨年，第 3 張。" },
@@ -836,7 +836,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "times-square-nye-2025-04",
-        src: "/photography/times-square-nye-2025/04.jpg",
+        src: "/stills/times-square-nye-2025/04.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "New Year's Eve at Times Square, photograph 4.", "zh-TW": "時代廣場跨年，第 4 張。" },
@@ -844,7 +844,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "times-square-nye-2025-05",
-        src: "/photography/times-square-nye-2025/05.jpg",
+        src: "/stills/times-square-nye-2025/05.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "New Year's Eve at Times Square, photograph 5.", "zh-TW": "時代廣場跨年，第 5 張。" },
@@ -852,7 +852,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "times-square-nye-2025-06",
-        src: "/photography/times-square-nye-2025/06.jpg",
+        src: "/stills/times-square-nye-2025/06.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "New Year's Eve at Times Square, photograph 6.", "zh-TW": "時代廣場跨年，第 6 張。" },
@@ -860,7 +860,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "times-square-nye-2025-07",
-        src: "/photography/times-square-nye-2025/07.jpg",
+        src: "/stills/times-square-nye-2025/07.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "New Year's Eve at Times Square, photograph 7.", "zh-TW": "時代廣場跨年，第 7 張。" },
@@ -868,7 +868,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "times-square-nye-2025-08",
-        src: "/photography/times-square-nye-2025/08.jpg",
+        src: "/stills/times-square-nye-2025/08.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "New Year's Eve at Times Square, photograph 8.", "zh-TW": "時代廣場跨年，第 8 張。" },
@@ -876,7 +876,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "times-square-nye-2025-09",
-        src: "/photography/times-square-nye-2025/09.jpg",
+        src: "/stills/times-square-nye-2025/09.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "New Year's Eve at Times Square, photograph 9.", "zh-TW": "時代廣場跨年，第 9 張。" },
@@ -884,7 +884,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "times-square-nye-2025-10",
-        src: "/photography/times-square-nye-2025/10.jpg",
+        src: "/stills/times-square-nye-2025/10.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "New Year's Eve at Times Square, photograph 10.", "zh-TW": "時代廣場跨年，第 10 張。" },
@@ -936,7 +936,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "party-hero",
-              src: "/photography/party/hero.jpg",
+              src: "/stills/party/hero.jpg",
               width: 1062,
               height: 1365,
               alt: { en: "Parties & Nightlife, cover.", "zh-TW": "派對與夜生活，封面。" },
@@ -944,7 +944,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "party-01",
-        src: "/photography/party/01.jpg",
+        src: "/stills/party/01.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Party, photograph 1.", "zh-TW": "派對，第 1 張。" },
@@ -952,7 +952,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "party-02",
-        src: "/photography/party/02.jpg",
+        src: "/stills/party/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Party, photograph 2.", "zh-TW": "派對，第 2 張。" },
@@ -960,7 +960,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "party-03",
-        src: "/photography/party/03.jpg",
+        src: "/stills/party/03.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Party, photograph 3.", "zh-TW": "派對，第 3 張。" },
@@ -968,7 +968,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "party-04",
-        src: "/photography/party/04.jpg",
+        src: "/stills/party/04.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Party, photograph 4.", "zh-TW": "派對，第 4 張。" },
@@ -976,7 +976,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "party-05",
-        src: "/photography/party/05.jpg",
+        src: "/stills/party/05.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Party, photograph 5.", "zh-TW": "派對，第 5 張。" },
@@ -984,7 +984,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "party-06",
-        src: "/photography/party/06.jpg",
+        src: "/stills/party/06.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Party, photograph 6.", "zh-TW": "派對，第 6 張。" },
@@ -992,7 +992,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "party-07",
-        src: "/photography/party/07.jpg",
+        src: "/stills/party/07.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Party, photograph 7.", "zh-TW": "派對，第 7 張。" },
@@ -1000,7 +1000,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "party-08",
-        src: "/photography/party/08.jpg",
+        src: "/stills/party/08.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Party, photograph 8.", "zh-TW": "派對，第 8 張。" },
@@ -1008,7 +1008,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "party-09",
-        src: "/photography/party/09.jpg",
+        src: "/stills/party/09.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Party, photograph 9.", "zh-TW": "派對，第 9 張。" },
@@ -1016,7 +1016,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "party-10",
-        src: "/photography/party/10.jpg",
+        src: "/stills/party/10.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Party, photograph 10.", "zh-TW": "派對，第 10 張。" },
@@ -1024,7 +1024,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "party-11",
-        src: "/photography/party/11.jpg",
+        src: "/stills/party/11.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Party, photograph 11.", "zh-TW": "派對，第 11 張。" },
@@ -1069,7 +1069,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "sound-walk-hero",
-              src: "/photography/sound-walk/hero.jpg",
+              src: "/stills/sound-walk/hero.jpg",
               width: 1041,
               height: 1365,
               alt: { en: "Audio Walk by Megan Hattie Stahl, cover.", "zh-TW": "Megan Hattie Stahl 的聲音漫步，封面。" },
@@ -1077,7 +1077,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "sound-walk-01",
-        src: "/photography/sound-walk/01.jpg",
+        src: "/stills/sound-walk/01.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Sound Walk, photograph 1.", "zh-TW": "聲音漫步，第 1 張。" },
@@ -1085,7 +1085,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "sound-walk-02",
-        src: "/photography/sound-walk/02.jpg",
+        src: "/stills/sound-walk/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Sound Walk, photograph 2.", "zh-TW": "聲音漫步，第 2 張。" },
@@ -1093,7 +1093,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "sound-walk-03",
-        src: "/photography/sound-walk/03.jpg",
+        src: "/stills/sound-walk/03.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Sound Walk, photograph 3.", "zh-TW": "聲音漫步，第 3 張。" },
@@ -1101,7 +1101,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "sound-walk-04",
-        src: "/photography/sound-walk/04.jpg",
+        src: "/stills/sound-walk/04.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Sound Walk, photograph 4.", "zh-TW": "聲音漫步，第 4 張。" },
@@ -1109,7 +1109,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "sound-walk-05",
-        src: "/photography/sound-walk/05.jpg",
+        src: "/stills/sound-walk/05.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Sound Walk, photograph 5.", "zh-TW": "聲音漫步，第 5 張。" },
@@ -1117,7 +1117,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "sound-walk-06",
-        src: "/photography/sound-walk/06.jpg",
+        src: "/stills/sound-walk/06.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Sound Walk, photograph 6.", "zh-TW": "聲音漫步，第 6 張。" },
@@ -1157,7 +1157,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "iceland-2024-hero",
-              src: "/photography/iceland-2024/hero.jpg",
+              src: "/stills/iceland-2024/hero.jpg",
               width: 1365,
               height: 2048,
               alt: { en: "Iceland, cover.", "zh-TW": "冰島，封面。" },
@@ -1165,7 +1165,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "iceland-2024-01",
-        src: "/photography/iceland-2024/01.jpg",
+        src: "/stills/iceland-2024/01.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Iceland, photograph 1.", "zh-TW": "冰島，第 1 張。" },
@@ -1173,7 +1173,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "iceland-2024-02",
-        src: "/photography/iceland-2024/02.jpg",
+        src: "/stills/iceland-2024/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Iceland, photograph 2.", "zh-TW": "冰島，第 2 張。" },
@@ -1181,7 +1181,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "iceland-2024-03",
-        src: "/photography/iceland-2024/03.jpg",
+        src: "/stills/iceland-2024/03.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Iceland, photograph 3.", "zh-TW": "冰島，第 3 張。" },
@@ -1189,7 +1189,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "iceland-2024-04",
-        src: "/photography/iceland-2024/04.jpg",
+        src: "/stills/iceland-2024/04.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "Iceland, photograph 4.", "zh-TW": "冰島，第 4 張。" },
@@ -1197,7 +1197,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "iceland-2024-05",
-        src: "/photography/iceland-2024/05.jpg",
+        src: "/stills/iceland-2024/05.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Iceland, photograph 5.", "zh-TW": "冰島，第 5 張。" },
@@ -1205,7 +1205,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "iceland-2024-06",
-        src: "/photography/iceland-2024/06.jpg",
+        src: "/stills/iceland-2024/06.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Iceland, photograph 6.", "zh-TW": "冰島，第 6 張。" },
@@ -1213,7 +1213,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "iceland-2024-07",
-        src: "/photography/iceland-2024/07.jpg",
+        src: "/stills/iceland-2024/07.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Iceland, photograph 7.", "zh-TW": "冰島，第 7 張。" },
@@ -1221,7 +1221,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "iceland-2024-08",
-        src: "/photography/iceland-2024/08.jpg",
+        src: "/stills/iceland-2024/08.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Iceland, photograph 8.", "zh-TW": "冰島，第 8 張。" },
@@ -1254,7 +1254,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "copenhagen-hero",
-              src: "/photography/copenhagen/hero.jpg",
+              src: "/stills/copenhagen/hero.jpg",
               width: 1365,
               height: 2048,
               alt: { en: "Copenhagen, cover.", "zh-TW": "哥本哈根，封面。" },
@@ -1262,7 +1262,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "copenhagen-01",
-        src: "/photography/copenhagen/01.jpg",
+        src: "/stills/copenhagen/01.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "Copenhagen, photograph 1.", "zh-TW": "哥本哈根，第 1 張。" },
@@ -1270,7 +1270,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "copenhagen-02",
-        src: "/photography/copenhagen/02.jpg",
+        src: "/stills/copenhagen/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Copenhagen, photograph 2.", "zh-TW": "哥本哈根，第 2 張。" },
@@ -1278,7 +1278,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "copenhagen-03",
-        src: "/photography/copenhagen/03.jpg",
+        src: "/stills/copenhagen/03.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Copenhagen, photograph 3.", "zh-TW": "哥本哈根，第 3 張。" },
@@ -1286,7 +1286,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "copenhagen-04",
-        src: "/photography/copenhagen/04.jpg",
+        src: "/stills/copenhagen/04.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "Copenhagen, photograph 4.", "zh-TW": "哥本哈根，第 4 張。" },
@@ -1294,7 +1294,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "copenhagen-05",
-        src: "/photography/copenhagen/05.jpg",
+        src: "/stills/copenhagen/05.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Copenhagen, photograph 5.", "zh-TW": "哥本哈根，第 5 張。" },
@@ -1302,7 +1302,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "copenhagen-06",
-        src: "/photography/copenhagen/06.jpg",
+        src: "/stills/copenhagen/06.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Copenhagen, photograph 6.", "zh-TW": "哥本哈根，第 6 張。" },
@@ -1310,7 +1310,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "copenhagen-07",
-        src: "/photography/copenhagen/07.jpg",
+        src: "/stills/copenhagen/07.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Copenhagen, photograph 7.", "zh-TW": "哥本哈根，第 7 張。" },
@@ -1318,7 +1318,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "copenhagen-08",
-        src: "/photography/copenhagen/08.jpg",
+        src: "/stills/copenhagen/08.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "Copenhagen, photograph 8.", "zh-TW": "哥本哈根，第 8 張。" },
@@ -1350,7 +1350,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "dallas-bw-hero",
-              src: "/photography/dallas-bw/hero.jpg",
+              src: "/stills/dallas-bw/hero.jpg",
               width: 1365,
               height: 2048,
               alt: { en: "Dallas BW, cover.", "zh-TW": "達拉斯 BW，封面。" },
@@ -1358,7 +1358,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "dallas-bw-01",
-        src: "/photography/dallas-bw/01.jpg",
+        src: "/stills/dallas-bw/01.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Dallas BW, photograph 1.", "zh-TW": "達拉斯 BW，第 1 張。" },
@@ -1366,7 +1366,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "dallas-bw-02",
-        src: "/photography/dallas-bw/02.jpg",
+        src: "/stills/dallas-bw/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Dallas BW, photograph 2.", "zh-TW": "達拉斯 BW，第 2 張。" },
@@ -1374,7 +1374,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "dallas-bw-03",
-        src: "/photography/dallas-bw/03.jpg",
+        src: "/stills/dallas-bw/03.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "Dallas BW, photograph 3.", "zh-TW": "達拉斯 BW，第 3 張。" },
@@ -1382,7 +1382,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "dallas-bw-04",
-        src: "/photography/dallas-bw/04.jpg",
+        src: "/stills/dallas-bw/04.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Dallas BW, photograph 4.", "zh-TW": "達拉斯 BW，第 4 張。" },
@@ -1390,7 +1390,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "dallas-bw-05",
-        src: "/photography/dallas-bw/05.jpg",
+        src: "/stills/dallas-bw/05.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Dallas BW, photograph 5.", "zh-TW": "達拉斯 BW，第 5 張。" },
@@ -1398,7 +1398,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "dallas-bw-06",
-        src: "/photography/dallas-bw/06.jpg",
+        src: "/stills/dallas-bw/06.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Dallas BW, photograph 6.", "zh-TW": "達拉斯 BW，第 6 張。" },
@@ -1430,7 +1430,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "kyoto-bw-hero",
-              src: "/photography/kyoto-bw/hero.jpg",
+              src: "/stills/kyoto-bw/hero.jpg",
               width: 1365,
               height: 2048,
               alt: { en: "Kyoto BW, cover.", "zh-TW": "京都 BW，封面。" },
@@ -1438,7 +1438,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "kyoto-bw-01",
-        src: "/photography/kyoto-bw/01.jpg",
+        src: "/stills/kyoto-bw/01.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "Kyoto BW, photograph 1.", "zh-TW": "京都 BW，第 1 張。" },
@@ -1446,7 +1446,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "kyoto-bw-02",
-        src: "/photography/kyoto-bw/02.jpg",
+        src: "/stills/kyoto-bw/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Kyoto BW, photograph 2.", "zh-TW": "京都 BW，第 2 張。" },
@@ -1454,7 +1454,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "kyoto-bw-03",
-        src: "/photography/kyoto-bw/03.jpg",
+        src: "/stills/kyoto-bw/03.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "Kyoto BW, photograph 3.", "zh-TW": "京都 BW，第 3 張。" },
@@ -1462,7 +1462,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "kyoto-bw-04",
-        src: "/photography/kyoto-bw/04.jpg",
+        src: "/stills/kyoto-bw/04.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "Kyoto BW, photograph 4.", "zh-TW": "京都 BW，第 4 張。" },
@@ -1470,7 +1470,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "kyoto-bw-05",
-        src: "/photography/kyoto-bw/05.jpg",
+        src: "/stills/kyoto-bw/05.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "Kyoto BW, photograph 5.", "zh-TW": "京都 BW，第 5 張。" },
@@ -1501,7 +1501,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "kyoto-winter-hero",
-              src: "/photography/kyoto-winter/hero.jpg",
+              src: "/stills/kyoto-winter/hero.jpg",
               width: 915,
               height: 1365,
               alt: { en: "Kyoto Winter, cover.", "zh-TW": "京都冬天，封面。" },
@@ -1509,7 +1509,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "kyoto-winter-01",
-        src: "/photography/kyoto-winter/01.jpg",
+        src: "/stills/kyoto-winter/01.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Kyoto Winter, photograph 1.", "zh-TW": "京都冬天，第 1 張。" },
@@ -1517,7 +1517,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "kyoto-winter-02",
-        src: "/photography/kyoto-winter/02.jpg",
+        src: "/stills/kyoto-winter/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Kyoto Winter, photograph 2.", "zh-TW": "京都冬天，第 2 張。" },
@@ -1525,7 +1525,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "kyoto-winter-03",
-        src: "/photography/kyoto-winter/03.jpg",
+        src: "/stills/kyoto-winter/03.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Kyoto Winter, photograph 3.", "zh-TW": "京都冬天，第 3 張。" },
@@ -1533,7 +1533,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "kyoto-winter-04",
-        src: "/photography/kyoto-winter/04.jpg",
+        src: "/stills/kyoto-winter/04.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Kyoto Winter, photograph 4.", "zh-TW": "京都冬天，第 4 張。" },
@@ -1541,7 +1541,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "kyoto-winter-05",
-        src: "/photography/kyoto-winter/05.jpg",
+        src: "/stills/kyoto-winter/05.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "Kyoto Winter, photograph 5.", "zh-TW": "京都冬天，第 5 張。" },
@@ -1572,7 +1572,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "nyc-fall-hero",
-              src: "/photography/nyc-fall/hero.jpg",
+              src: "/stills/nyc-fall/hero.jpg",
               width: 1365,
               height: 2048,
               alt: { en: "NYC Fall, cover.", "zh-TW": "紐約秋天，封面。" },
@@ -1580,7 +1580,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "nyc-fall-01",
-        src: "/photography/nyc-fall/01.jpg",
+        src: "/stills/nyc-fall/01.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "NYC Fall, photograph 1.", "zh-TW": "紐約秋天，第 1 張。" },
@@ -1588,7 +1588,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "nyc-fall-02",
-        src: "/photography/nyc-fall/02.jpg",
+        src: "/stills/nyc-fall/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "NYC Fall, photograph 2.", "zh-TW": "紐約秋天，第 2 張。" },
@@ -1596,7 +1596,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "nyc-fall-03",
-        src: "/photography/nyc-fall/03.jpg",
+        src: "/stills/nyc-fall/03.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "NYC Fall, photograph 3.", "zh-TW": "紐約秋天，第 3 張。" },
@@ -1604,7 +1604,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "nyc-fall-04",
-        src: "/photography/nyc-fall/04.jpg",
+        src: "/stills/nyc-fall/04.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "NYC Fall, photograph 4.", "zh-TW": "紐約秋天，第 4 張。" },
@@ -1612,7 +1612,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "nyc-fall-05",
-        src: "/photography/nyc-fall/05.jpg",
+        src: "/stills/nyc-fall/05.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "NYC Fall, photograph 5.", "zh-TW": "紐約秋天，第 5 張。" },
@@ -1620,7 +1620,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "nyc-fall-06",
-        src: "/photography/nyc-fall/06.jpg",
+        src: "/stills/nyc-fall/06.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "NYC Fall, photograph 6.", "zh-TW": "紐約秋天，第 6 張。" },
@@ -1628,7 +1628,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "nyc-fall-07",
-        src: "/photography/nyc-fall/07.jpg",
+        src: "/stills/nyc-fall/07.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "NYC Fall, photograph 7.", "zh-TW": "紐約秋天，第 7 張。" },
@@ -1660,7 +1660,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "nyc-summer-hero",
-              src: "/photography/nyc-summer/hero.jpg",
+              src: "/stills/nyc-summer/hero.jpg",
               width: 1018,
               height: 1365,
               alt: { en: "NYC Summer, cover.", "zh-TW": "紐約夏天，封面。" },
@@ -1668,7 +1668,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "nyc-summer-01",
-        src: "/photography/nyc-summer/01.jpg",
+        src: "/stills/nyc-summer/01.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "NYC Summer, photograph 1.", "zh-TW": "紐約夏天，第 1 張。" },
@@ -1676,7 +1676,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "nyc-summer-02",
-        src: "/photography/nyc-summer/02.jpg",
+        src: "/stills/nyc-summer/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "NYC Summer, photograph 2.", "zh-TW": "紐約夏天，第 2 張。" },
@@ -1684,7 +1684,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "nyc-summer-03",
-        src: "/photography/nyc-summer/03.jpg",
+        src: "/stills/nyc-summer/03.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "NYC Summer, photograph 3.", "zh-TW": "紐約夏天，第 3 張。" },
@@ -1692,7 +1692,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "nyc-summer-04",
-        src: "/photography/nyc-summer/04.jpg",
+        src: "/stills/nyc-summer/04.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "NYC Summer, photograph 4.", "zh-TW": "紐約夏天，第 4 張。" },
@@ -1700,7 +1700,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "nyc-summer-05",
-        src: "/photography/nyc-summer/05.jpg",
+        src: "/stills/nyc-summer/05.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "NYC Summer, photograph 5.", "zh-TW": "紐約夏天，第 5 張。" },
@@ -1708,7 +1708,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "nyc-summer-06",
-        src: "/photography/nyc-summer/06.jpg",
+        src: "/stills/nyc-summer/06.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "NYC Summer, photograph 6.", "zh-TW": "紐約夏天，第 6 張。" },
@@ -1716,7 +1716,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "nyc-summer-07",
-        src: "/photography/nyc-summer/07.jpg",
+        src: "/stills/nyc-summer/07.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "NYC Summer, photograph 7.", "zh-TW": "紐約夏天，第 7 張。" },
@@ -1749,7 +1749,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "nyc-winter-hero",
-              src: "/photography/nyc-winter/hero.jpg",
+              src: "/stills/nyc-winter/hero.jpg",
               width: 1038,
               height: 1560,
               alt: { en: "NYC Winter, cover.", "zh-TW": "紐約冬天，封面。" },
@@ -1757,7 +1757,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "nyc-winter-01",
-        src: "/photography/nyc-winter/01.jpg",
+        src: "/stills/nyc-winter/01.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "NYC Winter, photograph 1.", "zh-TW": "紐約冬天，第 1 張。" },
@@ -1765,7 +1765,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "nyc-winter-02",
-        src: "/photography/nyc-winter/02.jpg",
+        src: "/stills/nyc-winter/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "NYC Winter, photograph 2.", "zh-TW": "紐約冬天，第 2 張。" },
@@ -1773,7 +1773,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "nyc-winter-03",
-        src: "/photography/nyc-winter/03.jpg",
+        src: "/stills/nyc-winter/03.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "NYC Winter, photograph 3.", "zh-TW": "紐約冬天，第 3 張。" },
@@ -1781,7 +1781,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "nyc-winter-04",
-        src: "/photography/nyc-winter/04.jpg",
+        src: "/stills/nyc-winter/04.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "NYC Winter, photograph 4.", "zh-TW": "紐約冬天，第 4 張。" },
@@ -1789,7 +1789,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "nyc-winter-05",
-        src: "/photography/nyc-winter/05.jpg",
+        src: "/stills/nyc-winter/05.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "NYC Winter, photograph 5.", "zh-TW": "紐約冬天，第 5 張。" },
@@ -1797,7 +1797,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "nyc-winter-06",
-        src: "/photography/nyc-winter/06.jpg",
+        src: "/stills/nyc-winter/06.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "NYC Winter, photograph 6.", "zh-TW": "紐約冬天，第 6 張。" },
@@ -1805,7 +1805,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "nyc-winter-07",
-        src: "/photography/nyc-winter/07.jpg",
+        src: "/stills/nyc-winter/07.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "NYC Winter, photograph 7.", "zh-TW": "紐約冬天，第 7 張。" },
@@ -1837,7 +1837,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "paris-bw-hero",
-              src: "/photography/paris-bw/hero.jpg",
+              src: "/stills/paris-bw/hero.jpg",
               width: 1365,
               height: 2048,
               alt: { en: "Paris BW, cover.", "zh-TW": "巴黎 BW，封面。" },
@@ -1845,7 +1845,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "paris-bw-01",
-        src: "/photography/paris-bw/01.jpg",
+        src: "/stills/paris-bw/01.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "Paris BW, photograph 1.", "zh-TW": "巴黎 BW，第 1 張。" },
@@ -1853,7 +1853,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "paris-bw-02",
-        src: "/photography/paris-bw/02.jpg",
+        src: "/stills/paris-bw/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Paris BW, photograph 2.", "zh-TW": "巴黎 BW，第 2 張。" },
@@ -1861,7 +1861,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "paris-bw-03",
-        src: "/photography/paris-bw/03.jpg",
+        src: "/stills/paris-bw/03.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "Paris BW, photograph 3.", "zh-TW": "巴黎 BW，第 3 張。" },
@@ -1869,7 +1869,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "paris-bw-04",
-        src: "/photography/paris-bw/04.jpg",
+        src: "/stills/paris-bw/04.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Paris BW, photograph 4.", "zh-TW": "巴黎 BW，第 4 張。" },
@@ -1877,7 +1877,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "paris-bw-05",
-        src: "/photography/paris-bw/05.jpg",
+        src: "/stills/paris-bw/05.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "Paris BW, photograph 5.", "zh-TW": "巴黎 BW，第 5 張。" },
@@ -1885,7 +1885,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "paris-bw-06",
-        src: "/photography/paris-bw/06.jpg",
+        src: "/stills/paris-bw/06.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Paris BW, photograph 6.", "zh-TW": "巴黎 BW，第 6 張。" },
@@ -1893,7 +1893,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "paris-bw-07",
-        src: "/photography/paris-bw/07.jpg",
+        src: "/stills/paris-bw/07.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Paris BW, photograph 7.", "zh-TW": "巴黎 BW，第 7 張。" },
@@ -1901,7 +1901,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "paris-bw-08",
-        src: "/photography/paris-bw/08.jpg",
+        src: "/stills/paris-bw/08.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "Paris BW, photograph 8.", "zh-TW": "巴黎 BW，第 8 張。" },
@@ -1934,7 +1934,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "paris-vive-la-vie-hero",
-              src: "/photography/paris-vive-la-vie/hero.jpg",
+              src: "/stills/paris-vive-la-vie/hero.jpg",
               width: 922,
               height: 1286,
               alt: { en: "Paris, Vive la vie, cover.", "zh-TW": "巴黎，Vive la vie，封面。" },
@@ -1942,7 +1942,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "paris-vive-la-vie-01",
-        src: "/photography/paris-vive-la-vie/01.jpg",
+        src: "/stills/paris-vive-la-vie/01.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "Paris, Vive la vie, photograph 1.", "zh-TW": "巴黎，Vive la vie，第 1 張。" },
@@ -1950,7 +1950,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "paris-vive-la-vie-02",
-        src: "/photography/paris-vive-la-vie/02.jpg",
+        src: "/stills/paris-vive-la-vie/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Paris, Vive la vie, photograph 2.", "zh-TW": "巴黎，Vive la vie，第 2 張。" },
@@ -1958,7 +1958,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "paris-vive-la-vie-03",
-        src: "/photography/paris-vive-la-vie/03.jpg",
+        src: "/stills/paris-vive-la-vie/03.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Paris, Vive la vie, photograph 3.", "zh-TW": "巴黎，Vive la vie，第 3 張。" },
@@ -1966,7 +1966,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "paris-vive-la-vie-04",
-        src: "/photography/paris-vive-la-vie/04.jpg",
+        src: "/stills/paris-vive-la-vie/04.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Paris, Vive la vie, photograph 4.", "zh-TW": "巴黎，Vive la vie，第 4 張。" },
@@ -1974,7 +1974,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "paris-vive-la-vie-05",
-        src: "/photography/paris-vive-la-vie/05.jpg",
+        src: "/stills/paris-vive-la-vie/05.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Paris, Vive la vie, photograph 5.", "zh-TW": "巴黎，Vive la vie，第 5 張。" },
@@ -1982,7 +1982,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "paris-vive-la-vie-06",
-        src: "/photography/paris-vive-la-vie/06.jpg",
+        src: "/stills/paris-vive-la-vie/06.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Paris, Vive la vie, photograph 6.", "zh-TW": "巴黎，Vive la vie，第 6 張。" },
@@ -1990,7 +1990,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "paris-vive-la-vie-07",
-        src: "/photography/paris-vive-la-vie/07.jpg",
+        src: "/stills/paris-vive-la-vie/07.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Paris, Vive la vie, photograph 7.", "zh-TW": "巴黎，Vive la vie，第 7 張。" },
@@ -1998,7 +1998,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "paris-vive-la-vie-08",
-        src: "/photography/paris-vive-la-vie/08.jpg",
+        src: "/stills/paris-vive-la-vie/08.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Paris, Vive la vie, photograph 8.", "zh-TW": "巴黎，Vive la vie，第 8 張。" },
@@ -2032,7 +2032,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "sunflower-2014-hero",
-              src: "/photography/sunflower-2014/hero.jpg",
+              src: "/stills/sunflower-2014/hero.jpg",
               width: 1044,
               height: 1361,
               alt: { en: "Sunflower Social Movement, cover.", "zh-TW": "太陽花學運，封面。" },
@@ -2040,7 +2040,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "sunflower-2014-01",
-        src: "/photography/sunflower-2014/01.jpg",
+        src: "/stills/sunflower-2014/01.jpg",
         width: 2048,
         height: 1361,
         alt: { en: "Sunflower Social Movement, photograph 1.", "zh-TW": "太陽花學運，第 1 張。" },
@@ -2048,7 +2048,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "sunflower-2014-02",
-        src: "/photography/sunflower-2014/02.jpg",
+        src: "/stills/sunflower-2014/02.jpg",
         width: 2048,
         height: 1361,
         alt: { en: "Sunflower Social Movement, photograph 2.", "zh-TW": "太陽花學運，第 2 張。" },
@@ -2056,7 +2056,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "sunflower-2014-03",
-        src: "/photography/sunflower-2014/03.jpg",
+        src: "/stills/sunflower-2014/03.jpg",
         width: 2048,
         height: 1361,
         alt: { en: "Sunflower Social Movement, photograph 3.", "zh-TW": "太陽花學運，第 3 張。" },
@@ -2064,7 +2064,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "sunflower-2014-04",
-        src: "/photography/sunflower-2014/04.jpg",
+        src: "/stills/sunflower-2014/04.jpg",
         width: 2048,
         height: 1361,
         alt: { en: "Sunflower Social Movement, photograph 4.", "zh-TW": "太陽花學運，第 4 張。" },
@@ -2072,7 +2072,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "sunflower-2014-05",
-        src: "/photography/sunflower-2014/05.jpg",
+        src: "/stills/sunflower-2014/05.jpg",
         width: 2048,
         height: 1361,
         alt: { en: "Sunflower Social Movement, photograph 5.", "zh-TW": "太陽花學運，第 5 張。" },
@@ -2080,7 +2080,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "sunflower-2014-06",
-        src: "/photography/sunflower-2014/06.jpg",
+        src: "/stills/sunflower-2014/06.jpg",
         width: 2048,
         height: 1361,
         alt: { en: "Sunflower Social Movement, photograph 6.", "zh-TW": "太陽花學運，第 6 張。" },
@@ -2088,7 +2088,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "sunflower-2014-07",
-        src: "/photography/sunflower-2014/07.jpg",
+        src: "/stills/sunflower-2014/07.jpg",
         width: 2048,
         height: 1361,
         alt: { en: "Sunflower Social Movement, photograph 7.", "zh-TW": "太陽花學運，第 7 張。" },
@@ -2096,7 +2096,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "sunflower-2014-08",
-        src: "/photography/sunflower-2014/08.jpg",
+        src: "/stills/sunflower-2014/08.jpg",
         width: 2048,
         height: 1361,
         alt: { en: "Sunflower Social Movement, photograph 8.", "zh-TW": "太陽花學運，第 8 張。" },
@@ -2104,7 +2104,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "sunflower-2014-09",
-        src: "/photography/sunflower-2014/09.jpg",
+        src: "/stills/sunflower-2014/09.jpg",
         width: 2048,
         height: 1361,
         alt: { en: "Sunflower Social Movement, photograph 9.", "zh-TW": "太陽花學運，第 9 張。" },
@@ -2112,7 +2112,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "sunflower-2014-10",
-        src: "/photography/sunflower-2014/10.jpg",
+        src: "/stills/sunflower-2014/10.jpg",
         width: 2048,
         height: 1361,
         alt: { en: "Sunflower Social Movement, photograph 10.", "zh-TW": "太陽花學運，第 10 張。" },
@@ -2146,7 +2146,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
               id: "wedding-proposal-hero",
-              src: "/photography/wedding-proposal/hero.jpg",
+              src: "/stills/wedding-proposal/hero.jpg",
               width: 1365,
               height: 2048,
               alt: { en: "Wedding / Proposal, cover.", "zh-TW": "婚禮／求婚，封面。" },
@@ -2154,7 +2154,7 @@ export const addedAlbums: Project[] = [
             },
       {
         id: "wedding-proposal-01",
-        src: "/photography/wedding-proposal/01.jpg",
+        src: "/stills/wedding-proposal/01.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Wedding / Proposal, photograph 1.", "zh-TW": "婚禮／求婚，第 1 張。" },
@@ -2162,7 +2162,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "wedding-proposal-02",
-        src: "/photography/wedding-proposal/02.jpg",
+        src: "/stills/wedding-proposal/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Wedding / Proposal, photograph 2.", "zh-TW": "婚禮／求婚，第 2 張。" },
@@ -2170,7 +2170,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "wedding-proposal-03",
-        src: "/photography/wedding-proposal/03.jpg",
+        src: "/stills/wedding-proposal/03.jpg",
         width: 1365,
         height: 2048,
         alt: { en: "Wedding / Proposal, photograph 3.", "zh-TW": "婚禮／求婚，第 3 張。" },
@@ -2178,7 +2178,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "wedding-proposal-04",
-        src: "/photography/wedding-proposal/04.jpg",
+        src: "/stills/wedding-proposal/04.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Wedding / Proposal, photograph 4.", "zh-TW": "婚禮／求婚，第 4 張。" },
@@ -2186,7 +2186,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "wedding-proposal-05",
-        src: "/photography/wedding-proposal/05.jpg",
+        src: "/stills/wedding-proposal/05.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Wedding / Proposal, photograph 5.", "zh-TW": "婚禮／求婚，第 5 張。" },
@@ -2194,7 +2194,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "wedding-proposal-06",
-        src: "/photography/wedding-proposal/06.jpg",
+        src: "/stills/wedding-proposal/06.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Wedding / Proposal, photograph 6.", "zh-TW": "婚禮／求婚，第 6 張。" },
@@ -2202,7 +2202,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "wedding-proposal-07",
-        src: "/photography/wedding-proposal/07.jpg",
+        src: "/stills/wedding-proposal/07.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Wedding / Proposal, photograph 7.", "zh-TW": "婚禮／求婚，第 7 張。" },
@@ -2210,7 +2210,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "wedding-proposal-08",
-        src: "/photography/wedding-proposal/08.jpg",
+        src: "/stills/wedding-proposal/08.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Wedding / Proposal, photograph 8.", "zh-TW": "婚禮／求婚，第 8 張。" },
@@ -2218,7 +2218,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "wedding-proposal-09",
-        src: "/photography/wedding-proposal/09.jpg",
+        src: "/stills/wedding-proposal/09.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Wedding / Proposal, photograph 9.", "zh-TW": "婚禮／求婚，第 9 張。" },
@@ -2251,7 +2251,7 @@ export const addedAlbums: Project[] = [
     images: [
       {
         id: "uncategorized-01",
-        src: "/photography/uncategorized/01.jpg",
+        src: "/stills/uncategorized/01.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Uncategorized, photograph 1.", "zh-TW": "尚未分類，第 1 張。" },
@@ -2259,7 +2259,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "uncategorized-02",
-        src: "/photography/uncategorized/02.jpg",
+        src: "/stills/uncategorized/02.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Uncategorized, photograph 2.", "zh-TW": "尚未分類，第 2 張。" },
@@ -2267,7 +2267,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "uncategorized-03",
-        src: "/photography/uncategorized/03.jpg",
+        src: "/stills/uncategorized/03.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Uncategorized, photograph 3.", "zh-TW": "尚未分類，第 3 張。" },
@@ -2275,7 +2275,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "uncategorized-04",
-        src: "/photography/uncategorized/04.jpg",
+        src: "/stills/uncategorized/04.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Uncategorized, photograph 4.", "zh-TW": "尚未分類，第 4 張。" },
@@ -2283,7 +2283,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "uncategorized-05",
-        src: "/photography/uncategorized/05.jpg",
+        src: "/stills/uncategorized/05.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Uncategorized, photograph 5.", "zh-TW": "尚未分類，第 5 張。" },
@@ -2291,7 +2291,7 @@ export const addedAlbums: Project[] = [
       },
       {
         id: "uncategorized-06",
-        src: "/photography/uncategorized/06.jpg",
+        src: "/stills/uncategorized/06.jpg",
         width: 2048,
         height: 1365,
         alt: { en: "Uncategorized, photograph 6.", "zh-TW": "尚未分類，第 6 張。" },

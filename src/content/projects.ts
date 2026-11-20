@@ -20,7 +20,7 @@ export const projects: Project[] = [
     images: [
       {
               id: "nyc-spring-hero",
-              src: "/photography/nyc-spring/hero.jpg",
+              src: "/stills/nyc-spring/hero.jpg",
               width: 1053,
               height: 1365,
               alt: { en: "NYC Spring, cover.", "zh-TW": "紐約春天，封面。" },
@@ -28,7 +28,7 @@ export const projects: Project[] = [
             },
       {
         id: "nyc-01",
-        src: "/photography/nyc-spring/01.jpg",
+        src: "/stills/nyc-spring/01.jpg",
         width: 2048,
         height: 1365,
         objectPosition: "32% center",
@@ -40,7 +40,7 @@ export const projects: Project[] = [
       },
       {
         id: "nyc-02",
-        src: "/photography/nyc-spring/02.jpg",
+        src: "/stills/nyc-spring/02.jpg",
         width: 2048,
         height: 1365,
         alt: {
@@ -51,7 +51,7 @@ export const projects: Project[] = [
       },
       {
         id: "nyc-03",
-        src: "/photography/nyc-spring/03.jpg",
+        src: "/stills/nyc-spring/03.jpg",
         width: 2048,
         height: 1365,
         objectPosition: "28% center",
@@ -63,7 +63,7 @@ export const projects: Project[] = [
       },
       {
         id: "nyc-04",
-        src: "/photography/nyc-spring/04.jpg",
+        src: "/stills/nyc-spring/04.jpg",
         width: 2048,
         height: 1365,
         alt: {
@@ -74,7 +74,7 @@ export const projects: Project[] = [
       },
       {
         id: "nyc-05",
-        src: "/photography/nyc-spring/05.jpg",
+        src: "/stills/nyc-spring/05.jpg",
         width: 2048,
         height: 1365,
         alt: {
@@ -85,7 +85,7 @@ export const projects: Project[] = [
       },
       {
         id: "nyc-06",
-        src: "/photography/nyc-spring/06.jpg",
+        src: "/stills/nyc-spring/06.jpg",
         width: 2048,
         height: 1365,
         alt: {
@@ -96,7 +96,7 @@ export const projects: Project[] = [
       },
       {
         id: "nyc-07",
-        src: "/photography/nyc-spring/07.jpg",
+        src: "/stills/nyc-spring/07.jpg",
         width: 2048,
         height: 1365,
         alt: {
@@ -107,7 +107,7 @@ export const projects: Project[] = [
       },
       {
         id: "nyc-08",
-        src: "/photography/nyc-spring/08.jpg",
+        src: "/stills/nyc-spring/08.jpg",
         width: 2048,
         height: 1365,
         objectPosition: "72% center",
@@ -119,7 +119,7 @@ export const projects: Project[] = [
       },
       {
         id: "nyc-09",
-        src: "/photography/nyc-spring/09.jpg",
+        src: "/stills/nyc-spring/09.jpg",
         width: 2048,
         height: 1365,
         alt: {
@@ -158,7 +158,7 @@ export const projects: Project[] = [
     images: [
       {
               id: "yilan-mt-taiping-hero",
-              src: "/photography/yilan-mt-taiping/hero.jpg",
+              src: "/stills/yilan-mt-taiping/hero.jpg",
               width: 1113,
               height: 1365,
               alt: { en: "Yilan, Mt. Taiping, cover.", "zh-TW": "宜蘭太平山，封面。" },
@@ -166,7 +166,7 @@ export const projects: Project[] = [
             },
       {
         id: "yilan-01",
-        src: "/photography/yilan-mt-taiping/01.jpg",
+        src: "/stills/yilan-mt-taiping/01.jpg",
         width: 2048,
         height: 1365,
         objectPosition: "72% center",
@@ -178,7 +178,7 @@ export const projects: Project[] = [
       },
       {
         id: "yilan-02",
-        src: "/photography/yilan-mt-taiping/02.jpg",
+        src: "/stills/yilan-mt-taiping/02.jpg",
         width: 2048,
         height: 1365,
         alt: {
@@ -189,7 +189,7 @@ export const projects: Project[] = [
       },
       {
         id: "yilan-03",
-        src: "/photography/yilan-mt-taiping/03.jpg",
+        src: "/stills/yilan-mt-taiping/03.jpg",
         width: 2048,
         height: 1365,
         alt: {
@@ -200,7 +200,7 @@ export const projects: Project[] = [
       },
       {
         id: "yilan-04",
-        src: "/photography/yilan-mt-taiping/04.jpg",
+        src: "/stills/yilan-mt-taiping/04.jpg",
         width: 2048,
         height: 1365,
         alt: {
@@ -236,7 +236,7 @@ export const projects: Project[] = [
     images: [
       {
               id: "bubble-tea-shop-hero",
-              src: "/photography/bubble-tea-shop/hero.jpg",
+              src: "/stills/bubble-tea-shop/hero.jpg",
               width: 1365,
               height: 2048,
               alt: { en: "Bubble Tea Shop, cover.", "zh-TW": "手搖飲店，封面。" },
@@ -244,7 +244,7 @@ export const projects: Project[] = [
             },
       {
         id: "tea-01",
-        src: "/photography/bubble-tea-shop/01.jpg",
+        src: "/stills/bubble-tea-shop/01.jpg",
         width: 2048,
         height: 1365,
         alt: {
@@ -255,7 +255,7 @@ export const projects: Project[] = [
       },
       {
         id: "tea-02",
-        src: "/photography/bubble-tea-shop/02.jpg",
+        src: "/stills/bubble-tea-shop/02.jpg",
         width: 1365,
         height: 2048,
         alt: {
@@ -266,7 +266,7 @@ export const projects: Project[] = [
       },
       {
         id: "tea-03",
-        src: "/photography/bubble-tea-shop/03.jpg",
+        src: "/stills/bubble-tea-shop/03.jpg",
         width: 2048,
         height: 1365,
         alt: {
@@ -277,7 +277,7 @@ export const projects: Project[] = [
       },
       {
         id: "tea-04",
-        src: "/photography/bubble-tea-shop/04.jpg",
+        src: "/stills/bubble-tea-shop/04.jpg",
         width: 2048,
         height: 1365,
         alt: {
@@ -288,7 +288,7 @@ export const projects: Project[] = [
       },
       {
         id: "tea-05",
-        src: "/photography/bubble-tea-shop/05.jpg",
+        src: "/stills/bubble-tea-shop/05.jpg",
         width: 2048,
         height: 1365,
         alt: {

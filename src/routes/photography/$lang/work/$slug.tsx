@@ -5,7 +5,7 @@ import { site } from "@/content/site";
 import { isLang, t, type Lang } from "@/content/types";
 import { pageHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/$lang/work/$slug")({
+export const Route = createFileRoute("/photography/$lang/work/$slug")({
   beforeLoad: ({ params }) => {
     if (!getProject(params.slug)) throw notFound();
   },
@@ -17,10 +17,10 @@ export const Route = createFileRoute("/$lang/work/$slug")({
     return pageHead({
       title,
       description,
-      path: `/${lang}/work/${params.slug}`,
+      path: `/photography/${lang}/work/${params.slug}`,
       lang,
-      enPath: `/en/work/${params.slug}`,
-      zhPath: `/zh-tw/work/${params.slug}`,
+      enPath: `/photography/en/work/${params.slug}`,
+      zhPath: `/photography/zh-tw/work/${params.slug}`,
     });
   },
   component: ProjectPage,

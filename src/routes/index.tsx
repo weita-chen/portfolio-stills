@@ -1,44 +1,30 @@
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { useLayoutEffect } from "react";
-import { langKey, site } from "@/content/site";
-import type { Lang } from "@/content/types";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { site } from "@/content/site";
 
 export const Route = createFileRoute("/")({
-  component: LanguageGate,
   head: () => ({
-    scripts: [
-      {
-        children: `try{var l=localStorage.getItem("${langKey}");var n=l==="zh-tw"?"zh-tw":"en";if(location.pathname==="/"||location.pathname==="")location.replace("/"+n);}catch(e){}`,
-      },
+    meta: [
+      { title: site.name },
+      { name: "description", content: "Photography and filmmaking by WEITA CHEN." },
     ],
   }),
+  component: Entrance,
 });
 
-function LanguageGate() {
-  const navigate = useNavigate();
-  useLayoutEffect(() => {
-    let lang: Lang = "en";
-    try {
-      const saved = localStorage.getItem(langKey);
-      if (saved === "zh-tw") lang = "zh-tw";
-    } catch {
-      /* ignore */
-    }
-    void navigate({ to: "/$lang", params: { lang }, replace: true });
-  }, [navigate]);
-
+function Entrance() {
   return (
-    <main className="not-found">
-      <p className="page-kicker">{site.name}</p>
-      <h1 className="page-title">WEITA CHEN</h1>
-      <p className="cta-row">
-        <Link className="cta" to="/$lang" params={{ lang: "en" }}>
-          English
+    <main className="door">
+      <p className="door-name">{site.name}</p>
+      <div className="door-grid">
+        <Link className="door-link" to="/photography">
+          <span className="door-en">Photography</span>
+          <span className="door-zh">攝影</span>
         </Link>
-        <Link className="cta cta-quiet" to="/$lang" params={{ lang: "zh-tw" }}>
-          中文
+        <Link className="door-link" to="/filmmaking">
+          <span className="door-en">Filmmaking</span>
+          <span className="door-zh">影像</span>
         </Link>
-      </p>
+      </div>
     </main>
   );
 }

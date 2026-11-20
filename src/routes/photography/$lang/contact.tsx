@@ -5,16 +5,16 @@ import { contactEmail, site } from "@/content/site";
 import { isLang, t, type Lang } from "@/content/types";
 import { pageHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/$lang/contact")({
+export const Route = createFileRoute("/photography/$lang/contact")({
   head: ({ params }) => {
     const lang: Lang = isLang(params.lang) ? params.lang : "en";
     return pageHead({
       title: `${t(site.contactLabel, lang)} — ${site.name}`,
       description: t(site.contactInvite, lang),
-      path: `/${lang}/contact`,
+      path: `/photography/${lang}/contact`,
       lang,
-      enPath: "/en/contact",
-      zhPath: "/zh-tw/contact",
+      enPath: "/photography/en/contact",
+      zhPath: "/photography/zh-tw/contact",
     });
   },
   component: ContactPage,

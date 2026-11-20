@@ -10,108 +10,161 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as LangRouteRouteImport } from './routes/$lang/route'
+import { Route as FilmmakingRouteImport } from './routes/filmmaking'
 import { Route as LangIndexRouteImport } from './routes/$lang/index'
-import { Route as LangAboutRouteImport } from './routes/$lang/about'
-import { Route as LangContactRouteImport } from './routes/$lang/contact'
-import { Route as LangWorkIndexRouteImport } from './routes/$lang/work/index'
-import { Route as LangWorkSlugRouteImport } from './routes/$lang/work/$slug'
+import { Route as LangSplatRouteImport } from './routes/$lang/$'
+import { Route as PhotographyIndexRouteImport } from './routes/photography/index'
+import { Route as PhotographyLangRouteRouteImport } from './routes/photography/$lang/route'
+import { Route as PhotographyLangIndexRouteImport } from './routes/photography/$lang/index'
+import { Route as PhotographyLangAboutRouteImport } from './routes/photography/$lang/about'
+import { Route as PhotographyLangContactRouteImport } from './routes/photography/$lang/contact'
+import { Route as PhotographyLangWorkIndexRouteImport } from './routes/photography/$lang/work/index'
+import { Route as PhotographyLangWorkSlugRouteImport } from './routes/photography/$lang/work/$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LangRouteRoute = LangRouteRouteImport.update({
-  id: '/$lang',
-  path: '/$lang',
+const FilmmakingRoute = FilmmakingRouteImport.update({
+  id: '/filmmaking',
+  path: '/filmmaking',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LangIndexRoute = LangIndexRouteImport.update({
+  id: '/$lang/',
+  path: '/$lang/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LangSplatRoute = LangSplatRouteImport.update({
+  id: '/$lang/$',
+  path: '/$lang/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhotographyIndexRoute = PhotographyIndexRouteImport.update({
+  id: '/photography/',
+  path: '/photography/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhotographyLangRouteRoute = PhotographyLangRouteRouteImport.update({
+  id: '/photography/$lang',
+  path: '/photography/$lang',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhotographyLangIndexRoute = PhotographyLangIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => LangRouteRoute,
+  getParentRoute: () => PhotographyLangRouteRoute,
 } as any)
-const LangAboutRoute = LangAboutRouteImport.update({
+const PhotographyLangAboutRoute = PhotographyLangAboutRouteImport.update({
   id: '/about',
   path: '/about',
-  getParentRoute: () => LangRouteRoute,
+  getParentRoute: () => PhotographyLangRouteRoute,
 } as any)
-const LangContactRoute = LangContactRouteImport.update({
+const PhotographyLangContactRoute = PhotographyLangContactRouteImport.update({
   id: '/contact',
   path: '/contact',
-  getParentRoute: () => LangRouteRoute,
+  getParentRoute: () => PhotographyLangRouteRoute,
 } as any)
-const LangWorkIndexRoute = LangWorkIndexRouteImport.update({
-  id: '/work/',
-  path: '/work/',
-  getParentRoute: () => LangRouteRoute,
-} as any)
-const LangWorkSlugRoute = LangWorkSlugRouteImport.update({
+const PhotographyLangWorkIndexRoute =
+  PhotographyLangWorkIndexRouteImport.update({
+    id: '/work/',
+    path: '/work/',
+    getParentRoute: () => PhotographyLangRouteRoute,
+  } as any)
+const PhotographyLangWorkSlugRoute = PhotographyLangWorkSlugRouteImport.update({
   id: '/work/$slug',
   path: '/work/$slug',
-  getParentRoute: () => LangRouteRoute,
+  getParentRoute: () => PhotographyLangRouteRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/$lang': typeof LangRouteRouteWithChildren
-  '/$lang/about': typeof LangAboutRoute
-  '/$lang/contact': typeof LangContactRoute
+  '/filmmaking': typeof FilmmakingRoute
+  '/photography/$lang': typeof PhotographyLangRouteRouteWithChildren
+  '/$lang/$': typeof LangSplatRoute
   '/$lang/': typeof LangIndexRoute
-  '/$lang/work/$slug': typeof LangWorkSlugRoute
-  '/$lang/work/': typeof LangWorkIndexRoute
+  '/photography/': typeof PhotographyIndexRoute
+  '/photography/$lang/about': typeof PhotographyLangAboutRoute
+  '/photography/$lang/contact': typeof PhotographyLangContactRoute
+  '/photography/$lang/': typeof PhotographyLangIndexRoute
+  '/photography/$lang/work/$slug': typeof PhotographyLangWorkSlugRoute
+  '/photography/$lang/work/': typeof PhotographyLangWorkIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/$lang/about': typeof LangAboutRoute
-  '/$lang/contact': typeof LangContactRoute
+  '/filmmaking': typeof FilmmakingRoute
+  '/$lang/$': typeof LangSplatRoute
   '/$lang': typeof LangIndexRoute
-  '/$lang/work/$slug': typeof LangWorkSlugRoute
-  '/$lang/work': typeof LangWorkIndexRoute
+  '/photography': typeof PhotographyIndexRoute
+  '/photography/$lang/about': typeof PhotographyLangAboutRoute
+  '/photography/$lang/contact': typeof PhotographyLangContactRoute
+  '/photography/$lang': typeof PhotographyLangIndexRoute
+  '/photography/$lang/work/$slug': typeof PhotographyLangWorkSlugRoute
+  '/photography/$lang/work': typeof PhotographyLangWorkIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/$lang': typeof LangRouteRouteWithChildren
-  '/$lang/about': typeof LangAboutRoute
-  '/$lang/contact': typeof LangContactRoute
+  '/filmmaking': typeof FilmmakingRoute
+  '/photography/$lang': typeof PhotographyLangRouteRouteWithChildren
+  '/$lang/$': typeof LangSplatRoute
   '/$lang/': typeof LangIndexRoute
-  '/$lang/work/$slug': typeof LangWorkSlugRoute
-  '/$lang/work/': typeof LangWorkIndexRoute
+  '/photography/': typeof PhotographyIndexRoute
+  '/photography/$lang/about': typeof PhotographyLangAboutRoute
+  '/photography/$lang/contact': typeof PhotographyLangContactRoute
+  '/photography/$lang/': typeof PhotographyLangIndexRoute
+  '/photography/$lang/work/$slug': typeof PhotographyLangWorkSlugRoute
+  '/photography/$lang/work/': typeof PhotographyLangWorkIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/$lang'
-    | '/$lang/about'
-    | '/$lang/contact'
+    | '/filmmaking'
+    | '/photography/$lang'
+    | '/$lang/$'
     | '/$lang/'
-    | '/$lang/work/$slug'
-    | '/$lang/work/'
+    | '/photography/'
+    | '/photography/$lang/about'
+    | '/photography/$lang/contact'
+    | '/photography/$lang/'
+    | '/photography/$lang/work/$slug'
+    | '/photography/$lang/work/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/$lang/about'
-    | '/$lang/contact'
+    | '/filmmaking'
+    | '/$lang/$'
     | '/$lang'
-    | '/$lang/work/$slug'
-    | '/$lang/work'
+    | '/photography'
+    | '/photography/$lang/about'
+    | '/photography/$lang/contact'
+    | '/photography/$lang'
+    | '/photography/$lang/work/$slug'
+    | '/photography/$lang/work'
   id:
     | '__root__'
     | '/'
-    | '/$lang'
-    | '/$lang/about'
-    | '/$lang/contact'
+    | '/filmmaking'
+    | '/photography/$lang'
+    | '/$lang/$'
     | '/$lang/'
-    | '/$lang/work/$slug'
-    | '/$lang/work/'
+    | '/photography/'
+    | '/photography/$lang/about'
+    | '/photography/$lang/contact'
+    | '/photography/$lang/'
+    | '/photography/$lang/work/$slug'
+    | '/photography/$lang/work/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  LangRouteRoute: typeof LangRouteRouteWithChildren
+  FilmmakingRoute: typeof FilmmakingRoute
+  PhotographyLangRouteRoute: typeof PhotographyLangRouteRouteWithChildren
+  LangSplatRoute: typeof LangSplatRoute
+  LangIndexRoute: typeof LangIndexRoute
+  PhotographyIndexRoute: typeof PhotographyIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -123,74 +176,105 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/$lang': {
-      id: '/$lang'
-      path: '/$lang'
-      fullPath: '/$lang'
-      preLoaderRoute: typeof LangRouteRouteImport
+    '/filmmaking': {
+      id: '/filmmaking'
+      path: '/filmmaking'
+      fullPath: '/filmmaking'
+      preLoaderRoute: typeof FilmmakingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$lang/': {
       id: '/$lang/'
-      path: '/'
+      path: '/$lang'
       fullPath: '/$lang/'
       preLoaderRoute: typeof LangIndexRouteImport
-      parentRoute: typeof LangRouteRoute
+      parentRoute: typeof rootRouteImport
     }
-    '/$lang/about': {
-      id: '/$lang/about'
+    '/$lang/$': {
+      id: '/$lang/$'
+      path: '/$lang/$'
+      fullPath: '/$lang/$'
+      preLoaderRoute: typeof LangSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/photography/': {
+      id: '/photography/'
+      path: '/photography'
+      fullPath: '/photography/'
+      preLoaderRoute: typeof PhotographyIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/photography/$lang': {
+      id: '/photography/$lang'
+      path: '/photography/$lang'
+      fullPath: '/photography/$lang'
+      preLoaderRoute: typeof PhotographyLangRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/photography/$lang/': {
+      id: '/photography/$lang/'
+      path: '/'
+      fullPath: '/photography/$lang/'
+      preLoaderRoute: typeof PhotographyLangIndexRouteImport
+      parentRoute: typeof PhotographyLangRouteRoute
+    }
+    '/photography/$lang/about': {
+      id: '/photography/$lang/about'
       path: '/about'
-      fullPath: '/$lang/about'
-      preLoaderRoute: typeof LangAboutRouteImport
-      parentRoute: typeof LangRouteRoute
+      fullPath: '/photography/$lang/about'
+      preLoaderRoute: typeof PhotographyLangAboutRouteImport
+      parentRoute: typeof PhotographyLangRouteRoute
     }
-    '/$lang/contact': {
-      id: '/$lang/contact'
+    '/photography/$lang/contact': {
+      id: '/photography/$lang/contact'
       path: '/contact'
-      fullPath: '/$lang/contact'
-      preLoaderRoute: typeof LangContactRouteImport
-      parentRoute: typeof LangRouteRoute
+      fullPath: '/photography/$lang/contact'
+      preLoaderRoute: typeof PhotographyLangContactRouteImport
+      parentRoute: typeof PhotographyLangRouteRoute
     }
-    '/$lang/work/': {
-      id: '/$lang/work/'
+    '/photography/$lang/work/': {
+      id: '/photography/$lang/work/'
       path: '/work'
-      fullPath: '/$lang/work/'
-      preLoaderRoute: typeof LangWorkIndexRouteImport
-      parentRoute: typeof LangRouteRoute
+      fullPath: '/photography/$lang/work/'
+      preLoaderRoute: typeof PhotographyLangWorkIndexRouteImport
+      parentRoute: typeof PhotographyLangRouteRoute
     }
-    '/$lang/work/$slug': {
-      id: '/$lang/work/$slug'
+    '/photography/$lang/work/$slug': {
+      id: '/photography/$lang/work/$slug'
       path: '/work/$slug'
-      fullPath: '/$lang/work/$slug'
-      preLoaderRoute: typeof LangWorkSlugRouteImport
-      parentRoute: typeof LangRouteRoute
+      fullPath: '/photography/$lang/work/$slug'
+      preLoaderRoute: typeof PhotographyLangWorkSlugRouteImport
+      parentRoute: typeof PhotographyLangRouteRoute
     }
   }
 }
 
-interface LangRouteRouteChildren {
-  LangAboutRoute: typeof LangAboutRoute
-  LangContactRoute: typeof LangContactRoute
-  LangIndexRoute: typeof LangIndexRoute
-  LangWorkSlugRoute: typeof LangWorkSlugRoute
-  LangWorkIndexRoute: typeof LangWorkIndexRoute
+interface PhotographyLangRouteRouteChildren {
+  PhotographyLangAboutRoute: typeof PhotographyLangAboutRoute
+  PhotographyLangContactRoute: typeof PhotographyLangContactRoute
+  PhotographyLangIndexRoute: typeof PhotographyLangIndexRoute
+  PhotographyLangWorkSlugRoute: typeof PhotographyLangWorkSlugRoute
+  PhotographyLangWorkIndexRoute: typeof PhotographyLangWorkIndexRoute
 }
 
-const LangRouteRouteChildren: LangRouteRouteChildren = {
-  LangAboutRoute: LangAboutRoute,
-  LangContactRoute: LangContactRoute,
-  LangIndexRoute: LangIndexRoute,
-  LangWorkSlugRoute: LangWorkSlugRoute,
-  LangWorkIndexRoute: LangWorkIndexRoute,
+const PhotographyLangRouteRouteChildren: PhotographyLangRouteRouteChildren = {
+  PhotographyLangAboutRoute: PhotographyLangAboutRoute,
+  PhotographyLangContactRoute: PhotographyLangContactRoute,
+  PhotographyLangIndexRoute: PhotographyLangIndexRoute,
+  PhotographyLangWorkSlugRoute: PhotographyLangWorkSlugRoute,
+  PhotographyLangWorkIndexRoute: PhotographyLangWorkIndexRoute,
 }
 
-const LangRouteRouteWithChildren = LangRouteRoute._addFileChildren(
-  LangRouteRouteChildren,
-)
+const PhotographyLangRouteRouteWithChildren =
+  PhotographyLangRouteRoute._addFileChildren(PhotographyLangRouteRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  LangRouteRoute: LangRouteRouteWithChildren,
+  FilmmakingRoute: FilmmakingRoute,
+  PhotographyLangRouteRoute: PhotographyLangRouteRouteWithChildren,
+  LangSplatRoute: LangSplatRoute,
+  LangIndexRoute: LangIndexRoute,
+  PhotographyIndexRoute: PhotographyIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

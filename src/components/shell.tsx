@@ -42,12 +42,12 @@ export function Shell({ lang }: { lang: Lang }) {
   }, [open]);
 
   const current = (id: string) => {
-    const base = `/${lang}`;
+    const base = `/photography/${lang}`;
     if (id === "home") return pathname === base || pathname === `${base}/`;
     return pathname === `${base}/${id}` || pathname.startsWith(`${base}/${id}/`);
   };
 
-  const isHome = pathname === `/${lang}` || pathname === `/${lang}/`;
+  const isHome = pathname === `/photography/${lang}` || pathname === `/photography/${lang}/`;
 
   return (
     <div className="frame-root" data-home={isHome ? "true" : "false"} data-menu={open ? "open" : "closed"}>
@@ -55,7 +55,7 @@ export function Shell({ lang }: { lang: Lang }) {
         {t(site.skip, lang)}
       </a>
       <Link
-        to="/$lang"
+        to="/photography/$lang"
         params={{ lang }}
         className="home-mark"
         aria-label={t(site.homeLabel, lang)}
@@ -96,16 +96,16 @@ export function Shell({ lang }: { lang: Lang }) {
           inert={!open}
         >
           <nav className="menu-nav" aria-label={lang === "zh-tw" ? "主要" : "Primary"}>
-            <Link to="/$lang" params={{ lang }} aria-current={current("home") ? "page" : undefined} onClick={() => setOpen(false)}>
+            <Link to="/photography/$lang" params={{ lang }} aria-current={current("home") ? "page" : undefined} onClick={() => setOpen(false)}>
               {t(site.homeLabel, lang)}
             </Link>
-            <Link to="/$lang/work" params={{ lang }} aria-current={current("work") ? "page" : undefined} onClick={() => setOpen(false)}>
+            <Link to="/photography/$lang/work" params={{ lang }} aria-current={current("work") ? "page" : undefined} onClick={() => setOpen(false)}>
               {t(site.workLabel, lang)}
             </Link>
-            <Link to="/$lang/about" params={{ lang }} aria-current={current("about") ? "page" : undefined} onClick={() => setOpen(false)}>
+            <Link to="/photography/$lang/about" params={{ lang }} aria-current={current("about") ? "page" : undefined} onClick={() => setOpen(false)}>
               {t(site.aboutLabel, lang)}
             </Link>
-            <Link to="/$lang/contact" params={{ lang }} aria-current={current("contact") ? "page" : undefined} onClick={() => setOpen(false)}>
+            <Link to="/photography/$lang/contact" params={{ lang }} aria-current={current("contact") ? "page" : undefined} onClick={() => setOpen(false)}>
               {t(site.contactLabel, lang)}
             </Link>
           </nav>
