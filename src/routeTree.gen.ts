@@ -18,10 +18,12 @@ import { Route as FilmmakingLangRouteRouteImport } from './routes/filmmaking/$la
 import { Route as PhotographyIndexRouteImport } from './routes/photography/index'
 import { Route as PhotographyLangRouteRouteImport } from './routes/photography/$lang/route'
 import { Route as FilmmakingLangIndexRouteImport } from './routes/filmmaking/$lang/index'
+import { Route as FilmmakingLangSplatRouteImport } from './routes/filmmaking/$lang/$'
 import { Route as FilmmakingLangAboutRouteImport } from './routes/filmmaking/$lang/about'
 import { Route as FilmmakingLangContactRouteImport } from './routes/filmmaking/$lang/contact'
 import { Route as FilmmakingLangReelRouteImport } from './routes/filmmaking/$lang/reel'
 import { Route as PhotographyLangIndexRouteImport } from './routes/photography/$lang/index'
+import { Route as PhotographyLangSplatRouteImport } from './routes/photography/$lang/$'
 import { Route as PhotographyLangAboutRouteImport } from './routes/photography/$lang/about'
 import { Route as PhotographyLangContactRouteImport } from './routes/photography/$lang/contact'
 import { Route as FilmmakingLangWorkIndexRouteImport } from './routes/filmmaking/$lang/work/index'
@@ -74,6 +76,11 @@ const FilmmakingLangIndexRoute = FilmmakingLangIndexRouteImport.update({
   path: '/',
   getParentRoute: () => FilmmakingLangRouteRoute,
 } as any)
+const FilmmakingLangSplatRoute = FilmmakingLangSplatRouteImport.update({
+  id: '/$',
+  path: '/$',
+  getParentRoute: () => FilmmakingLangRouteRoute,
+} as any)
 const FilmmakingLangAboutRoute = FilmmakingLangAboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -92,6 +99,11 @@ const FilmmakingLangReelRoute = FilmmakingLangReelRouteImport.update({
 const PhotographyLangIndexRoute = PhotographyLangIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => PhotographyLangRouteRoute,
+} as any)
+const PhotographyLangSplatRoute = PhotographyLangSplatRouteImport.update({
+  id: '/$',
+  path: '/$',
   getParentRoute: () => PhotographyLangRouteRoute,
 } as any)
 const PhotographyLangAboutRoute = PhotographyLangAboutRouteImport.update({
@@ -135,9 +147,11 @@ export interface FileRoutesByFullPath {
   '/$lang/': typeof LangIndexRoute
   '/filmmaking/': typeof FilmmakingIndexRoute
   '/photography/': typeof PhotographyIndexRoute
+  '/filmmaking/$lang/$': typeof FilmmakingLangSplatRoute
   '/filmmaking/$lang/about': typeof FilmmakingLangAboutRoute
   '/filmmaking/$lang/contact': typeof FilmmakingLangContactRoute
   '/filmmaking/$lang/reel': typeof FilmmakingLangReelRoute
+  '/photography/$lang/$': typeof PhotographyLangSplatRoute
   '/photography/$lang/about': typeof PhotographyLangAboutRoute
   '/photography/$lang/contact': typeof PhotographyLangContactRoute
   '/filmmaking/$lang/': typeof FilmmakingLangIndexRoute
@@ -154,9 +168,11 @@ export interface FileRoutesByTo {
   '/$lang': typeof LangIndexRoute
   '/filmmaking': typeof FilmmakingIndexRoute
   '/photography': typeof PhotographyIndexRoute
+  '/filmmaking/$lang/$': typeof FilmmakingLangSplatRoute
   '/filmmaking/$lang/about': typeof FilmmakingLangAboutRoute
   '/filmmaking/$lang/contact': typeof FilmmakingLangContactRoute
   '/filmmaking/$lang/reel': typeof FilmmakingLangReelRoute
+  '/photography/$lang/$': typeof PhotographyLangSplatRoute
   '/photography/$lang/about': typeof PhotographyLangAboutRoute
   '/photography/$lang/contact': typeof PhotographyLangContactRoute
   '/filmmaking/$lang': typeof FilmmakingLangIndexRoute
@@ -176,9 +192,11 @@ export interface FileRoutesById {
   '/$lang/': typeof LangIndexRoute
   '/filmmaking/': typeof FilmmakingIndexRoute
   '/photography/': typeof PhotographyIndexRoute
+  '/filmmaking/$lang/$': typeof FilmmakingLangSplatRoute
   '/filmmaking/$lang/about': typeof FilmmakingLangAboutRoute
   '/filmmaking/$lang/contact': typeof FilmmakingLangContactRoute
   '/filmmaking/$lang/reel': typeof FilmmakingLangReelRoute
+  '/photography/$lang/$': typeof PhotographyLangSplatRoute
   '/photography/$lang/about': typeof PhotographyLangAboutRoute
   '/photography/$lang/contact': typeof PhotographyLangContactRoute
   '/filmmaking/$lang/': typeof FilmmakingLangIndexRoute
@@ -199,9 +217,11 @@ export interface FileRouteTypes {
     | '/$lang/'
     | '/filmmaking/'
     | '/photography/'
+    | '/filmmaking/$lang/$'
     | '/filmmaking/$lang/about'
     | '/filmmaking/$lang/contact'
     | '/filmmaking/$lang/reel'
+    | '/photography/$lang/$'
     | '/photography/$lang/about'
     | '/photography/$lang/contact'
     | '/filmmaking/$lang/'
@@ -218,9 +238,11 @@ export interface FileRouteTypes {
     | '/$lang'
     | '/filmmaking'
     | '/photography'
+    | '/filmmaking/$lang/$'
     | '/filmmaking/$lang/about'
     | '/filmmaking/$lang/contact'
     | '/filmmaking/$lang/reel'
+    | '/photography/$lang/$'
     | '/photography/$lang/about'
     | '/photography/$lang/contact'
     | '/filmmaking/$lang'
@@ -239,9 +261,11 @@ export interface FileRouteTypes {
     | '/$lang/'
     | '/filmmaking/'
     | '/photography/'
+    | '/filmmaking/$lang/$'
     | '/filmmaking/$lang/about'
     | '/filmmaking/$lang/contact'
     | '/filmmaking/$lang/reel'
+    | '/photography/$lang/$'
     | '/photography/$lang/about'
     | '/photography/$lang/contact'
     | '/filmmaking/$lang/'
@@ -328,6 +352,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FilmmakingLangIndexRouteImport
       parentRoute: typeof FilmmakingLangRouteRoute
     }
+    '/filmmaking/$lang/$': {
+      id: '/filmmaking/$lang/$'
+      path: '/$'
+      fullPath: '/filmmaking/$lang/$'
+      preLoaderRoute: typeof FilmmakingLangSplatRouteImport
+      parentRoute: typeof FilmmakingLangRouteRoute
+    }
     '/filmmaking/$lang/about': {
       id: '/filmmaking/$lang/about'
       path: '/about'
@@ -354,6 +385,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/photography/$lang/'
       preLoaderRoute: typeof PhotographyLangIndexRouteImport
+      parentRoute: typeof PhotographyLangRouteRoute
+    }
+    '/photography/$lang/$': {
+      id: '/photography/$lang/$'
+      path: '/$'
+      fullPath: '/photography/$lang/$'
+      preLoaderRoute: typeof PhotographyLangSplatRouteImport
       parentRoute: typeof PhotographyLangRouteRoute
     }
     '/photography/$lang/about': {
@@ -402,6 +440,7 @@ declare module '@tanstack/react-router' {
 }
 
 interface FilmmakingLangRouteRouteChildren {
+  FilmmakingLangSplatRoute: typeof FilmmakingLangSplatRoute
   FilmmakingLangAboutRoute: typeof FilmmakingLangAboutRoute
   FilmmakingLangContactRoute: typeof FilmmakingLangContactRoute
   FilmmakingLangReelRoute: typeof FilmmakingLangReelRoute
@@ -411,6 +450,7 @@ interface FilmmakingLangRouteRouteChildren {
 }
 
 const FilmmakingLangRouteRouteChildren: FilmmakingLangRouteRouteChildren = {
+  FilmmakingLangSplatRoute: FilmmakingLangSplatRoute,
   FilmmakingLangAboutRoute: FilmmakingLangAboutRoute,
   FilmmakingLangContactRoute: FilmmakingLangContactRoute,
   FilmmakingLangReelRoute: FilmmakingLangReelRoute,
@@ -423,6 +463,7 @@ const FilmmakingLangRouteRouteWithChildren =
   FilmmakingLangRouteRoute._addFileChildren(FilmmakingLangRouteRouteChildren)
 
 interface PhotographyLangRouteRouteChildren {
+  PhotographyLangSplatRoute: typeof PhotographyLangSplatRoute
   PhotographyLangAboutRoute: typeof PhotographyLangAboutRoute
   PhotographyLangContactRoute: typeof PhotographyLangContactRoute
   PhotographyLangIndexRoute: typeof PhotographyLangIndexRoute
@@ -431,6 +472,7 @@ interface PhotographyLangRouteRouteChildren {
 }
 
 const PhotographyLangRouteRouteChildren: PhotographyLangRouteRouteChildren = {
+  PhotographyLangSplatRoute: PhotographyLangSplatRoute,
   PhotographyLangAboutRoute: PhotographyLangAboutRoute,
   PhotographyLangContactRoute: PhotographyLangContactRoute,
   PhotographyLangIndexRoute: PhotographyLangIndexRoute,

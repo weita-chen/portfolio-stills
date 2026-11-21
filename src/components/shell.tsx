@@ -3,20 +3,13 @@ import { Link, Outlet, useRouterState } from "@tanstack/react-router";
 import { site } from "@/content/site";
 import { isLang, localizePath, t, type Lang } from "@/content/types";
 import { LoadMark } from "@/components/load-mark";
+import { rememberLang } from "@/lib/lang-pref";
 
 export function Shell({ lang }: { lang: Lang }) {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
   const [open, setOpen] = useState(false);
   const [filterOpen, setFilterOpen] = useState(false);
   const other: Lang = lang === "en" ? "zh-tw" : "en";
-
-  useEffect(() => {
-    try {
-      localStorage.setItem("weita-lang", lang);
-    } catch {
-      /* storage may be blocked */
-    }
-  }, [lang]);
 
   useEffect(() => {
     const onFilter = (event: Event) => {
@@ -154,13 +147,7 @@ function LangAnchor({
       hrefLang={next === "zh-tw" ? "zh-Hant" : "en"}
       aria-current={current === next ? "true" : undefined}
       onClick={() => {
-        if (isLang(next)) {
-          try {
-            localStorage.setItem("weita-lang", next);
-          } catch {
-            /* ignore */
-          }
-        }
+        if (isLang(next)) rememberLang(next);
       }}
     >
       {children}

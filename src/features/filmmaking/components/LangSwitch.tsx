@@ -1,5 +1,5 @@
 import { useRouter, useRouterState } from "@tanstack/react-router";
-import { langKey } from "@/content/site";
+import { rememberLang } from "@/lib/lang-pref";
 import { localizePath } from "@/content/types";
 import type { FilmLang } from "../lib/i18n";
 import { classifyMove, playFilmExit } from "../lib/transition";
@@ -38,11 +38,7 @@ function LangLink({
       hrefLang={target === "zh-tw" ? "zh-Hant" : "en"}
       aria-current={current === target ? "true" : undefined}
       onClick={(event) => {
-        try {
-          localStorage.setItem(langKey, target);
-        } catch {
-          /* storage may be blocked */
-        }
+        rememberLang(target);
         if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         if (current === target) return;
         const kind = classifyMove(window.location.pathname, href);

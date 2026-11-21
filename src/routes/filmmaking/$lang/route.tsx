@@ -3,11 +3,16 @@ import { FilmNotFound } from "@/features/filmmaking/components/FilmNotFound";
 import { FilmShell } from "@/features/filmmaking/components/FilmShell";
 import { isFilmLang } from "@/features/filmmaking/lib/i18n";
 import { filmFonts } from "@/features/filmmaking/lib/seo";
+import { langRedirect, preferredLang, withPreferredLang } from "@/lib/lang-pref";
 import "@/features/filmmaking/styles/film.css";
 
 export const Route = createFileRoute("/filmmaking/$lang")({
-  beforeLoad: ({ params }) => {
-    if (!isFilmLang(params.lang)) throw notFound();
+  beforeLoad: async ({ params, location }) => {
+    if (isFilmLang(params.lang)) return;
+    const lang = await preferredLang();
+    const next = withPreferredLang("filmmaking", location.pathname, lang);
+    if (next === location.pathname.replace(/\/+$/, "")) throw notFound();
+    throw langRedirect(next);
   },
   head: () => ({
     links: filmFonts,

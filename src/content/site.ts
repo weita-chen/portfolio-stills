@@ -1,7 +1,7 @@
 import type { Copy } from "./types";
 
-/** Production origin for canonical links. Set VITE_SITE_URL when the domain is known. */
-export const siteOrigin = (import.meta.env.VITE_SITE_URL ?? "").replace(/\/$/, "");
+/** Production origin for canonical and hreflang links. */
+export const siteOrigin = (import.meta.env.VITE_SITE_URL ?? "https://weitachen.pro").replace(/\/$/, "");
 
 /**
  * Contact mailbox. Leave empty until the owner supplies an address.
