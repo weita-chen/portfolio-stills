@@ -1,0 +1,455 @@
+[
+  {
+    "slug": "showreel",
+    "title": {
+      "en": "Showreel 2026",
+      "zh-tw": "影像集錦 2026"
+    },
+    "client": {
+      "en": "WEITA CHEN",
+      "zh-tw": "WEITA CHEN"
+    },
+    "category": "showreel",
+    "roles": [
+      "director"
+    ],
+    "year": 2026,
+    "order": 0,
+    "featured": true,
+    "published": true,
+    "summary": {
+      "en": "Showreel 2026, a placeholder film.",
+      "zh-tw": "影像集錦 2026，佔位影片。"
+    },
+    "credits": [
+      {
+        "role": {
+          "en": "Director",
+          "zh-tw": "導演"
+        },
+        "name": "WEITA CHEN"
+      }
+    ],
+    "specs": {
+      "aspectRatio": "16:9",
+      "location": {
+        "en": "Taipei",
+        "zh-tw": "台北"
+      }
+    },
+    "video": {
+      "fullPlaybackId": "a4nOgmxGWg6gULfcBbAa00gXyfcwPnAFldF8RdsNyk8M",
+      "aspectRatio": "16:9",
+      "posterTime": 5,
+      "durationSec": 90
+    }
+  },
+  {
+    "slug": "night-market",
+    "title": {
+      "en": "Placeholder — Night Market",
+      "zh-tw": "佔位 — 夜市"
+    },
+    "client": {
+      "en": "North Gate",
+      "zh-tw": "北門"
+    },
+    "category": "commercial",
+    "roles": [
+      "director"
+    ],
+    "year": 2025,
+    "order": 1,
+    "featured": true,
+    "published": true,
+    "summary": {
+      "en": "Placeholder — Night Market, a placeholder film.",
+      "zh-tw": "佔位 — 夜市，佔位影片。"
+    },
+    "credits": [
+      {
+        "role": {
+          "en": "Director",
+          "zh-tw": "導演"
+        },
+        "name": "WEITA CHEN"
+      }
+    ],
+    "specs": {
+      "aspectRatio": "2.39:1",
+      "location": {
+        "en": "Taipei",
+        "zh-tw": "台北"
+      }
+    },
+    "video": {
+      "fullPlaybackId": "EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs",
+      "aspectRatio": "2.39:1",
+      "posterTime": 2,
+      "durationSec": 97
+    }
+  },
+  {
+    "slug": "glass-house",
+    "title": {
+      "en": "Placeholder — Glass House",
+      "zh-tw": "佔位 — 玻璃屋"
+    },
+    "client": {
+      "en": "Lumen",
+      "zh-tw": "流明"
+    },
+    "category": "music-video",
+    "roles": [
+      "dp"
+    ],
+    "year": 2024,
+    "order": 2,
+    "featured": true,
+    "published": true,
+    "summary": {
+      "en": "Placeholder — Glass House, a placeholder film.",
+      "zh-tw": "佔位 — 玻璃屋，佔位影片。"
+    },
+    "credits": [
+      {
+        "role": {
+          "en": "Director",
+          "zh-tw": "導演"
+        },
+        "name": "WEITA CHEN"
+      }
+    ],
+    "specs": {
+      "aspectRatio": "16:9",
+      "location": {
+        "en": "Taipei",
+        "zh-tw": "台北"
+      }
+    },
+    "video": {
+      "fullPlaybackId": "601n4w1fq88NJiVpzvrQQeQfNnnjjfKMIN7dCGAEarTs",
+      "aspectRatio": "16:9",
+      "posterTime": 3,
+      "durationSec": 104
+    },
+    "stillTimes": [3, 10, 14, 16]
+  },
+  {
+    "slug": "vertical-rain",
+    "title": {
+      "en": "Placeholder — Vertical Rain",
+      "zh-tw": "佔位 — 直式雨"
+    },
+    "client": {
+      "en": "Harbor Notes",
+      "zh-tw": "港邊筆記"
+    },
+    "category": "documentary",
+    "roles": [
+      "editor"
+    ],
+    "year": 2023,
+    "order": 3,
+    "featured": true,
+    "published": true,
+    "summary": {
+      "en": "Placeholder — Vertical Rain, a placeholder film.",
+      "zh-tw": "佔位 — 直式雨，佔位影片。"
+    },
+    "credits": [
+      {
+        "role": {
+          "en": "Director",
+          "zh-tw": "導演"
+        },
+        "name": "WEITA CHEN"
+      }
+    ],
+    "specs": {
+      "aspectRatio": "9:16",
+      "location": {
+        "en": "Taipei",
+        "zh-tw": "台北"
+      }
+    },
+    "video": {
+      "fullPlaybackId": "VZtzUzGRv02OhRnZCxcNg49OilvolTqdnFLEqBsTwaxU",
+      "aspectRatio": "9:16",
+      "posterTime": 6,
+      "durationSec": 111
+    }
+  },
+  {
+    "slug": "platform",
+    "title": {
+      "en": "Placeholder — Platform",
+      "zh-tw": "佔位 — 月台"
+    },
+    "client": {
+      "en": "Last Train",
+      "zh-tw": "末班"
+    },
+    "category": "narrative",
+    "roles": [
+      "cinematographer"
+    ],
+    "year": 2022,
+    "order": 4,
+    "featured": true,
+    "published": true,
+    "summary": {
+      "en": "Placeholder — Platform, a placeholder film.",
+      "zh-tw": "佔位 — 月台，佔位影片。"
+    },
+    "credits": [
+      {
+        "role": {
+          "en": "Director",
+          "zh-tw": "導演"
+        },
+        "name": "WEITA CHEN"
+      }
+    ],
+    "specs": {
+      "aspectRatio": "1.85:1",
+      "location": {
+        "en": "Taipei",
+        "zh-tw": "台北"
+      }
+    },
+    "video": {
+      "fullPlaybackId": "a4nOgmxGWg6gULfcBbAa00gXyfcwPnAFldF8RdsNyk8M",
+      "aspectRatio": "1.85:1",
+      "posterTime": 5,
+      "durationSec": 118
+    }
+  },
+  {
+    "slug": "brass",
+    "title": {
+      "en": "Placeholder — Brass",
+      "zh-tw": "佔位 — 銅管"
+    },
+    "client": {
+      "en": "Room Tone",
+      "zh-tw": "房間底噪"
+    },
+    "category": "brand-film",
+    "roles": [
+      "colorist"
+    ],
+    "year": 2021,
+    "order": 5,
+    "featured": true,
+    "published": true,
+    "summary": {
+      "en": "Placeholder — Brass, a placeholder film.",
+      "zh-tw": "佔位 — 銅管，佔位影片。"
+    },
+    "credits": [
+      {
+        "role": {
+          "en": "Director",
+          "zh-tw": "導演"
+        },
+        "name": "WEITA CHEN"
+      }
+    ],
+    "specs": {
+      "aspectRatio": "4:3",
+      "location": {
+        "en": "Taipei",
+        "zh-tw": "台北"
+      }
+    },
+    "video": {
+      "fullPlaybackId": "EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs",
+      "aspectRatio": "4:3",
+      "posterTime": 6,
+      "durationSec": 125
+    }
+  },
+  {
+    "slug": "night-bus",
+    "title": {
+      "en": "Placeholder — Night Bus",
+      "zh-tw": "佔位 — 夜車"
+    },
+    "client": {
+      "en": "City Line",
+      "zh-tw": "城線"
+    },
+    "category": "event",
+    "roles": [
+      "producer"
+    ],
+    "year": 2020,
+    "order": 6,
+    "featured": true,
+    "published": true,
+    "summary": {
+      "en": "Placeholder — Night Bus, a placeholder film.",
+      "zh-tw": "佔位 — 夜車，佔位影片。"
+    },
+    "credits": [
+      {
+        "role": {
+          "en": "Director",
+          "zh-tw": "導演"
+        },
+        "name": "WEITA CHEN"
+      }
+    ],
+    "specs": {
+      "aspectRatio": "2:1",
+      "location": {
+        "en": "Taipei",
+        "zh-tw": "台北"
+      }
+    },
+    "video": {
+      "fullPlaybackId": "601n4w1fq88NJiVpzvrQQeQfNnnjjfKMIN7dCGAEarTs",
+      "aspectRatio": "2:1",
+      "posterTime": 7,
+      "durationSec": 132
+    },
+    "stillTimes": [3, 10, 14, 16]
+  },
+  {
+    "slug": "river-light",
+    "title": {
+      "en": "Placeholder — River Light",
+      "zh-tw": "佔位 — 河光"
+    },
+    "client": {
+      "en": "South Bank",
+      "zh-tw": "南岸"
+    },
+    "category": "personal",
+    "roles": [
+      "dp"
+    ],
+    "year": 2019,
+    "order": 7,
+    "featured": true,
+    "published": true,
+    "summary": {
+      "en": "Placeholder — River Light, a placeholder film.",
+      "zh-tw": "佔位 — 河光，佔位影片。"
+    },
+    "credits": [
+      {
+        "role": {
+          "en": "Director",
+          "zh-tw": "導演"
+        },
+        "name": "WEITA CHEN"
+      }
+    ],
+    "specs": {
+      "aspectRatio": "16:9",
+      "location": {
+        "en": "Taipei",
+        "zh-tw": "台北"
+      }
+    },
+    "video": {
+      "fullPlaybackId": "VZtzUzGRv02OhRnZCxcNg49OilvolTqdnFLEqBsTwaxU",
+      "aspectRatio": "16:9",
+      "posterTime": 8,
+      "durationSec": 139
+    }
+  },
+  {
+    "slug": "red-room",
+    "title": {
+      "en": "Placeholder — Red Room",
+      "zh-tw": "佔位 — 紅房間"
+    },
+    "client": {
+      "en": "Afterimage",
+      "zh-tw": "殘影"
+    },
+    "category": "commercial",
+    "roles": [
+      "director",
+      "colorist"
+    ],
+    "year": 2018,
+    "order": 8,
+    "featured": true,
+    "published": true,
+    "summary": {
+      "en": "Placeholder — Red Room, a placeholder film.",
+      "zh-tw": "佔位 — 紅房間，佔位影片。"
+    },
+    "credits": [
+      {
+        "role": {
+          "en": "Director",
+          "zh-tw": "導演"
+        },
+        "name": "WEITA CHEN"
+      }
+    ],
+    "specs": {
+      "aspectRatio": "2.39:1",
+      "location": {
+        "en": "Taipei",
+        "zh-tw": "台北"
+      }
+    },
+    "video": {
+      "fullPlaybackId": "a4nOgmxGWg6gULfcBbAa00gXyfcwPnAFldF8RdsNyk8M",
+      "aspectRatio": "2.39:1",
+      "posterTime": 5,
+      "durationSec": 146
+    }
+  },
+  {
+    "slug": "alley",
+    "title": {
+      "en": "Placeholder — Alley",
+      "zh-tw": "佔位 — 巷口"
+    },
+    "client": {
+      "en": "Side Street",
+      "zh-tw": "側街"
+    },
+    "category": "documentary",
+    "roles": [
+      "editor"
+    ],
+    "year": 2017,
+    "order": 9,
+    "featured": true,
+    "published": true,
+    "summary": {
+      "en": "Placeholder — Alley, a placeholder film.",
+      "zh-tw": "佔位 — 巷口，佔位影片。"
+    },
+    "credits": [
+      {
+        "role": {
+          "en": "Director",
+          "zh-tw": "導演"
+        },
+        "name": "WEITA CHEN"
+      }
+    ],
+    "specs": {
+      "aspectRatio": "9:16",
+      "location": {
+        "en": "Taipei",
+        "zh-tw": "台北"
+      }
+    },
+    "video": {
+      "fullPlaybackId": "EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs",
+      "aspectRatio": "9:16",
+      "posterTime": 2,
+      "durationSec": 153
+    }
+  }
+]

@@ -9,6 +9,7 @@ import { site } from "@/content/site";
 import { t, type Lang, type LayoutSection, type Photo, type Project } from "@/content/types";
 import { Frame, Lightbox } from "./media";
 import { SiteFoot } from "./shell";
+import { photoSizes } from "@/content/photos";
 
 export function ProjectView({ project, lang }: { project: Project; lang: Lang }) {
   const photos = interactivePhotos(project);
@@ -109,7 +110,7 @@ function PortraitLead({
 }) {
   return (
     <header className="figure-split align-left with-copy">
-      <Clickable photo={photo} lang={lang} priority onOpen={onOpen} />
+      <Clickable photo={photo} lang={lang} priority sizes={photoSizes.split} onOpen={onOpen} />
       <div className="open-copy">
         <p className="page-kicker">{String(project.order).padStart(2, "0")}</p>
         <h1>{t(project.title, lang)}</h1>
@@ -203,13 +204,25 @@ function ImageFigure({
   if (!isPortrait(photo)) {
     return (
       <div className={hero ? "project-hero" : "section-full"}>
-        <Clickable photo={photo} lang={lang} priority={priority} onOpen={onOpen} />
+        <Clickable
+          photo={photo}
+          lang={lang}
+          priority={priority}
+          sizes={isPortrait(photo) ? photoSizes.split : hero ? photoSizes.bleed : photoSizes.full}
+          onOpen={onOpen}
+        />
       </div>
     );
   }
   return (
     <div className={`figure-split align-${align}`}>
-      <Clickable photo={photo} lang={lang} priority={priority} onOpen={onOpen} />
+      <Clickable
+        photo={photo}
+        lang={lang}
+        priority={priority}
+        sizes={photoSizes.split}
+        onOpen={onOpen}
+      />
     </div>
   );
 }
@@ -219,12 +232,14 @@ function Clickable({
   lang,
   priority,
   ratio = true,
+  sizes = photoSizes.full,
   onOpen,
 }: {
   photo: Photo;
   lang: Lang;
   priority?: boolean;
   ratio?: boolean;
+  sizes?: string;
   onOpen: (photo: Photo) => void;
 }) {
   if (photo.placeholder || !photo.src) {
@@ -237,7 +252,7 @@ function Clickable({
       onClick={() => onOpen(photo)}
       aria-label={`${t(site.enlarge, lang)}: ${t(photo.alt, lang)}`}
     >
-      <Frame photo={photo} lang={lang} priority={priority} ratio={false} />
+      <Frame photo={photo} lang={lang} priority={priority} ratio={false} sizes={sizes} />
     </button>
   );
 }

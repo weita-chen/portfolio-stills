@@ -10,14 +10,22 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as FilmmakingRouteImport } from './routes/filmmaking'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as LangIndexRouteImport } from './routes/$lang/index'
 import { Route as LangSplatRouteImport } from './routes/$lang/$'
+import { Route as FilmmakingIndexRouteImport } from './routes/filmmaking/index'
+import { Route as FilmmakingLangRouteRouteImport } from './routes/filmmaking/$lang/route'
 import { Route as PhotographyIndexRouteImport } from './routes/photography/index'
 import { Route as PhotographyLangRouteRouteImport } from './routes/photography/$lang/route'
+import { Route as FilmmakingLangIndexRouteImport } from './routes/filmmaking/$lang/index'
+import { Route as FilmmakingLangAboutRouteImport } from './routes/filmmaking/$lang/about'
+import { Route as FilmmakingLangContactRouteImport } from './routes/filmmaking/$lang/contact'
+import { Route as FilmmakingLangReelRouteImport } from './routes/filmmaking/$lang/reel'
 import { Route as PhotographyLangIndexRouteImport } from './routes/photography/$lang/index'
 import { Route as PhotographyLangAboutRouteImport } from './routes/photography/$lang/about'
 import { Route as PhotographyLangContactRouteImport } from './routes/photography/$lang/contact'
+import { Route as FilmmakingLangWorkIndexRouteImport } from './routes/filmmaking/$lang/work/index'
+import { Route as FilmmakingLangWorkSlugRouteImport } from './routes/filmmaking/$lang/work/$slug'
 import { Route as PhotographyLangWorkIndexRouteImport } from './routes/photography/$lang/work/index'
 import { Route as PhotographyLangWorkSlugRouteImport } from './routes/photography/$lang/work/$slug'
 
@@ -26,9 +34,9 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const FilmmakingRoute = FilmmakingRouteImport.update({
-  id: '/filmmaking',
-  path: '/filmmaking',
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LangIndexRoute = LangIndexRouteImport.update({
@@ -41,6 +49,16 @@ const LangSplatRoute = LangSplatRouteImport.update({
   path: '/$lang/$',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FilmmakingIndexRoute = FilmmakingIndexRouteImport.update({
+  id: '/filmmaking/',
+  path: '/filmmaking/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FilmmakingLangRouteRoute = FilmmakingLangRouteRouteImport.update({
+  id: '/filmmaking/$lang',
+  path: '/filmmaking/$lang',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PhotographyIndexRoute = PhotographyIndexRouteImport.update({
   id: '/photography/',
   path: '/photography/',
@@ -50,6 +68,26 @@ const PhotographyLangRouteRoute = PhotographyLangRouteRouteImport.update({
   id: '/photography/$lang',
   path: '/photography/$lang',
   getParentRoute: () => rootRouteImport,
+} as any)
+const FilmmakingLangIndexRoute = FilmmakingLangIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => FilmmakingLangRouteRoute,
+} as any)
+const FilmmakingLangAboutRoute = FilmmakingLangAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => FilmmakingLangRouteRoute,
+} as any)
+const FilmmakingLangContactRoute = FilmmakingLangContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => FilmmakingLangRouteRoute,
+} as any)
+const FilmmakingLangReelRoute = FilmmakingLangReelRouteImport.update({
+  id: '/reel',
+  path: '/reel',
+  getParentRoute: () => FilmmakingLangRouteRoute,
 } as any)
 const PhotographyLangIndexRoute = PhotographyLangIndexRouteImport.update({
   id: '/',
@@ -66,6 +104,16 @@ const PhotographyLangContactRoute = PhotographyLangContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => PhotographyLangRouteRoute,
 } as any)
+const FilmmakingLangWorkIndexRoute = FilmmakingLangWorkIndexRouteImport.update({
+  id: '/work/',
+  path: '/work/',
+  getParentRoute: () => FilmmakingLangRouteRoute,
+} as any)
+const FilmmakingLangWorkSlugRoute = FilmmakingLangWorkSlugRouteImport.update({
+  id: '/work/$slug',
+  path: '/work/$slug',
+  getParentRoute: () => FilmmakingLangRouteRoute,
+} as any)
 const PhotographyLangWorkIndexRoute =
   PhotographyLangWorkIndexRouteImport.update({
     id: '/work/',
@@ -80,90 +128,138 @@ const PhotographyLangWorkSlugRoute = PhotographyLangWorkSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/filmmaking': typeof FilmmakingRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/filmmaking/$lang': typeof FilmmakingLangRouteRouteWithChildren
   '/photography/$lang': typeof PhotographyLangRouteRouteWithChildren
   '/$lang/$': typeof LangSplatRoute
   '/$lang/': typeof LangIndexRoute
+  '/filmmaking/': typeof FilmmakingIndexRoute
   '/photography/': typeof PhotographyIndexRoute
+  '/filmmaking/$lang/about': typeof FilmmakingLangAboutRoute
+  '/filmmaking/$lang/contact': typeof FilmmakingLangContactRoute
+  '/filmmaking/$lang/reel': typeof FilmmakingLangReelRoute
   '/photography/$lang/about': typeof PhotographyLangAboutRoute
   '/photography/$lang/contact': typeof PhotographyLangContactRoute
+  '/filmmaking/$lang/': typeof FilmmakingLangIndexRoute
   '/photography/$lang/': typeof PhotographyLangIndexRoute
+  '/filmmaking/$lang/work/$slug': typeof FilmmakingLangWorkSlugRoute
   '/photography/$lang/work/$slug': typeof PhotographyLangWorkSlugRoute
+  '/filmmaking/$lang/work/': typeof FilmmakingLangWorkIndexRoute
   '/photography/$lang/work/': typeof PhotographyLangWorkIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/filmmaking': typeof FilmmakingRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$lang/$': typeof LangSplatRoute
   '/$lang': typeof LangIndexRoute
+  '/filmmaking': typeof FilmmakingIndexRoute
   '/photography': typeof PhotographyIndexRoute
+  '/filmmaking/$lang/about': typeof FilmmakingLangAboutRoute
+  '/filmmaking/$lang/contact': typeof FilmmakingLangContactRoute
+  '/filmmaking/$lang/reel': typeof FilmmakingLangReelRoute
   '/photography/$lang/about': typeof PhotographyLangAboutRoute
   '/photography/$lang/contact': typeof PhotographyLangContactRoute
+  '/filmmaking/$lang': typeof FilmmakingLangIndexRoute
   '/photography/$lang': typeof PhotographyLangIndexRoute
+  '/filmmaking/$lang/work/$slug': typeof FilmmakingLangWorkSlugRoute
   '/photography/$lang/work/$slug': typeof PhotographyLangWorkSlugRoute
+  '/filmmaking/$lang/work': typeof FilmmakingLangWorkIndexRoute
   '/photography/$lang/work': typeof PhotographyLangWorkIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/filmmaking': typeof FilmmakingRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/filmmaking/$lang': typeof FilmmakingLangRouteRouteWithChildren
   '/photography/$lang': typeof PhotographyLangRouteRouteWithChildren
   '/$lang/$': typeof LangSplatRoute
   '/$lang/': typeof LangIndexRoute
+  '/filmmaking/': typeof FilmmakingIndexRoute
   '/photography/': typeof PhotographyIndexRoute
+  '/filmmaking/$lang/about': typeof FilmmakingLangAboutRoute
+  '/filmmaking/$lang/contact': typeof FilmmakingLangContactRoute
+  '/filmmaking/$lang/reel': typeof FilmmakingLangReelRoute
   '/photography/$lang/about': typeof PhotographyLangAboutRoute
   '/photography/$lang/contact': typeof PhotographyLangContactRoute
+  '/filmmaking/$lang/': typeof FilmmakingLangIndexRoute
   '/photography/$lang/': typeof PhotographyLangIndexRoute
+  '/filmmaking/$lang/work/$slug': typeof FilmmakingLangWorkSlugRoute
   '/photography/$lang/work/$slug': typeof PhotographyLangWorkSlugRoute
+  '/filmmaking/$lang/work/': typeof FilmmakingLangWorkIndexRoute
   '/photography/$lang/work/': typeof PhotographyLangWorkIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/filmmaking'
+    | '/sitemap.xml'
+    | '/filmmaking/$lang'
     | '/photography/$lang'
     | '/$lang/$'
     | '/$lang/'
+    | '/filmmaking/'
     | '/photography/'
+    | '/filmmaking/$lang/about'
+    | '/filmmaking/$lang/contact'
+    | '/filmmaking/$lang/reel'
     | '/photography/$lang/about'
     | '/photography/$lang/contact'
+    | '/filmmaking/$lang/'
     | '/photography/$lang/'
+    | '/filmmaking/$lang/work/$slug'
     | '/photography/$lang/work/$slug'
+    | '/filmmaking/$lang/work/'
     | '/photography/$lang/work/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/filmmaking'
+    | '/sitemap.xml'
     | '/$lang/$'
     | '/$lang'
+    | '/filmmaking'
     | '/photography'
+    | '/filmmaking/$lang/about'
+    | '/filmmaking/$lang/contact'
+    | '/filmmaking/$lang/reel'
     | '/photography/$lang/about'
     | '/photography/$lang/contact'
+    | '/filmmaking/$lang'
     | '/photography/$lang'
+    | '/filmmaking/$lang/work/$slug'
     | '/photography/$lang/work/$slug'
+    | '/filmmaking/$lang/work'
     | '/photography/$lang/work'
   id:
     | '__root__'
     | '/'
-    | '/filmmaking'
+    | '/sitemap.xml'
+    | '/filmmaking/$lang'
     | '/photography/$lang'
     | '/$lang/$'
     | '/$lang/'
+    | '/filmmaking/'
     | '/photography/'
+    | '/filmmaking/$lang/about'
+    | '/filmmaking/$lang/contact'
+    | '/filmmaking/$lang/reel'
     | '/photography/$lang/about'
     | '/photography/$lang/contact'
+    | '/filmmaking/$lang/'
     | '/photography/$lang/'
+    | '/filmmaking/$lang/work/$slug'
     | '/photography/$lang/work/$slug'
+    | '/filmmaking/$lang/work/'
     | '/photography/$lang/work/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  FilmmakingRoute: typeof FilmmakingRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  FilmmakingLangRouteRoute: typeof FilmmakingLangRouteRouteWithChildren
   PhotographyLangRouteRoute: typeof PhotographyLangRouteRouteWithChildren
   LangSplatRoute: typeof LangSplatRoute
   LangIndexRoute: typeof LangIndexRoute
+  FilmmakingIndexRoute: typeof FilmmakingIndexRoute
   PhotographyIndexRoute: typeof PhotographyIndexRoute
 }
 
@@ -176,11 +272,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/filmmaking': {
-      id: '/filmmaking'
-      path: '/filmmaking'
-      fullPath: '/filmmaking'
-      preLoaderRoute: typeof FilmmakingRouteImport
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$lang/': {
@@ -197,6 +293,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/filmmaking/': {
+      id: '/filmmaking/'
+      path: '/filmmaking'
+      fullPath: '/filmmaking/'
+      preLoaderRoute: typeof FilmmakingIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/filmmaking/$lang': {
+      id: '/filmmaking/$lang'
+      path: '/filmmaking/$lang'
+      fullPath: '/filmmaking/$lang'
+      preLoaderRoute: typeof FilmmakingLangRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/photography/': {
       id: '/photography/'
       path: '/photography'
@@ -210,6 +320,34 @@ declare module '@tanstack/react-router' {
       fullPath: '/photography/$lang'
       preLoaderRoute: typeof PhotographyLangRouteRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/filmmaking/$lang/': {
+      id: '/filmmaking/$lang/'
+      path: '/'
+      fullPath: '/filmmaking/$lang/'
+      preLoaderRoute: typeof FilmmakingLangIndexRouteImport
+      parentRoute: typeof FilmmakingLangRouteRoute
+    }
+    '/filmmaking/$lang/about': {
+      id: '/filmmaking/$lang/about'
+      path: '/about'
+      fullPath: '/filmmaking/$lang/about'
+      preLoaderRoute: typeof FilmmakingLangAboutRouteImport
+      parentRoute: typeof FilmmakingLangRouteRoute
+    }
+    '/filmmaking/$lang/contact': {
+      id: '/filmmaking/$lang/contact'
+      path: '/contact'
+      fullPath: '/filmmaking/$lang/contact'
+      preLoaderRoute: typeof FilmmakingLangContactRouteImport
+      parentRoute: typeof FilmmakingLangRouteRoute
+    }
+    '/filmmaking/$lang/reel': {
+      id: '/filmmaking/$lang/reel'
+      path: '/reel'
+      fullPath: '/filmmaking/$lang/reel'
+      preLoaderRoute: typeof FilmmakingLangReelRouteImport
+      parentRoute: typeof FilmmakingLangRouteRoute
     }
     '/photography/$lang/': {
       id: '/photography/$lang/'
@@ -232,6 +370,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PhotographyLangContactRouteImport
       parentRoute: typeof PhotographyLangRouteRoute
     }
+    '/filmmaking/$lang/work/': {
+      id: '/filmmaking/$lang/work/'
+      path: '/work'
+      fullPath: '/filmmaking/$lang/work/'
+      preLoaderRoute: typeof FilmmakingLangWorkIndexRouteImport
+      parentRoute: typeof FilmmakingLangRouteRoute
+    }
+    '/filmmaking/$lang/work/$slug': {
+      id: '/filmmaking/$lang/work/$slug'
+      path: '/work/$slug'
+      fullPath: '/filmmaking/$lang/work/$slug'
+      preLoaderRoute: typeof FilmmakingLangWorkSlugRouteImport
+      parentRoute: typeof FilmmakingLangRouteRoute
+    }
     '/photography/$lang/work/': {
       id: '/photography/$lang/work/'
       path: '/work'
@@ -248,6 +400,27 @@ declare module '@tanstack/react-router' {
     }
   }
 }
+
+interface FilmmakingLangRouteRouteChildren {
+  FilmmakingLangAboutRoute: typeof FilmmakingLangAboutRoute
+  FilmmakingLangContactRoute: typeof FilmmakingLangContactRoute
+  FilmmakingLangReelRoute: typeof FilmmakingLangReelRoute
+  FilmmakingLangIndexRoute: typeof FilmmakingLangIndexRoute
+  FilmmakingLangWorkSlugRoute: typeof FilmmakingLangWorkSlugRoute
+  FilmmakingLangWorkIndexRoute: typeof FilmmakingLangWorkIndexRoute
+}
+
+const FilmmakingLangRouteRouteChildren: FilmmakingLangRouteRouteChildren = {
+  FilmmakingLangAboutRoute: FilmmakingLangAboutRoute,
+  FilmmakingLangContactRoute: FilmmakingLangContactRoute,
+  FilmmakingLangReelRoute: FilmmakingLangReelRoute,
+  FilmmakingLangIndexRoute: FilmmakingLangIndexRoute,
+  FilmmakingLangWorkSlugRoute: FilmmakingLangWorkSlugRoute,
+  FilmmakingLangWorkIndexRoute: FilmmakingLangWorkIndexRoute,
+}
+
+const FilmmakingLangRouteRouteWithChildren =
+  FilmmakingLangRouteRoute._addFileChildren(FilmmakingLangRouteRouteChildren)
 
 interface PhotographyLangRouteRouteChildren {
   PhotographyLangAboutRoute: typeof PhotographyLangAboutRoute
@@ -270,10 +443,12 @@ const PhotographyLangRouteRouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  FilmmakingRoute: FilmmakingRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  FilmmakingLangRouteRoute: FilmmakingLangRouteRouteWithChildren,
   PhotographyLangRouteRoute: PhotographyLangRouteRouteWithChildren,
   LangSplatRoute: LangSplatRoute,
   LangIndexRoute: LangIndexRoute,
+  FilmmakingIndexRoute: FilmmakingIndexRoute,
   PhotographyIndexRoute: PhotographyIndexRoute,
 }
 export const routeTree = rootRouteImport

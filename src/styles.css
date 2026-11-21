@@ -177,6 +177,8 @@
 .slideshow {
   position: absolute;
   inset: 0;
+  background-size: cover;
+  background-position: center;
 }
 
 .slideshow img {
@@ -736,7 +738,9 @@ body:has(.frame-root[data-home="true"]) {
 .frame {
   position: relative;
   overflow: hidden;
-  background: var(--color-paper-deep);
+  background-color: var(--color-paper-deep);
+  background-size: cover;
+  background-position: center;
 }
 
 .frame img {
@@ -1270,6 +1274,46 @@ body:has(.frame-root[data-home="true"]) {
   width: auto;
   height: auto;
   object-fit: contain;
+}
+
+.slideshow picture,
+.frame picture,
+.lightbox-stage picture {
+  display: contents;
+}
+
+.load-mark {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 420ms ease;
+}
+
+.load-mark[data-on="true"] {
+  opacity: 1;
+}
+
+.load-mark img {
+  width: min(78vw, 34rem);
+  height: auto;
+}
+
+.load-mark[data-tone="dark"] img {
+  filter: drop-shadow(0 1px 14px rgb(0 0 0 / 0.55));
+}
+
+.load-mark[data-tone="light"] img {
+  filter: drop-shadow(0 1px 12px rgb(243 239 232 / 0.9));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .load-mark {
+    transition: none;
+  }
 }
 
 .lb-caption {

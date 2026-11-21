@@ -9,6 +9,7 @@ import {
 import { site } from "@/content/site";
 import { t, type Lang, type Project } from "@/content/types";
 import { Frame } from "./media";
+import { photoSizes } from "@/content/photos";
 
 const DRIFT = [
   { y: "-14vh", time: "18.5s", delay: "0s", lead: "0px" },
@@ -289,7 +290,7 @@ function Column({
           key={project.id}
           project={project}
           lang={lang}
-          priority={start + index < 4}
+          priority={start + index === 0}
         />
       ))}
     </div>
@@ -320,7 +321,7 @@ function Tile({
       className="work-tile"
     >
       <div className="tile-media" style={{ aspectRatio: ratio }}>
-        <Frame photo={cover} lang={lang} priority={priority} ratio={false} />
+        <Frame photo={cover} lang={lang} priority={priority} ratio={false} sizes={photoSizes.tile} />
       </div>
       <span className="tile-caption">
         <span className="tile-title">{t(project.title, lang)}</span>

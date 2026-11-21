@@ -1,32 +1,89 @@
-import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
+import { createRootRoute, HeadContent, Outlet, Scripts, useRouterState } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import appCss from "../styles.css?url";
 
-const FONT =
-  "https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@400;500&family=Outfit:wght@300;400;500&display=swap";
+const OUTFIT_LATIN = "/fonts/latin/QGYvz_MVcBeNP4NJtEtq.woff2";
+const NEWSREADER_LATIN = "/fonts/latin/cY9AfjOCX1hbuyalUrK4397yjA.woff2";
+const NEWSREADER_ITALIC = "/fonts/latin/cY9XfjOCX1hbuyalUrK439vogqCz_goCYw7oRd6JFYYzbA.woff2";
+
+function documentLang(pathname: string) {
+  return /^\/(?:photography|filmmaking)\/zh-tw(?:\/|$)/.test(pathname) ? "zh-Hant-TW" : "en";
+}
+
+function fontPreloads(pathname: string) {
+  const links: Array<{
+    rel: "preload";
+    href: string;
+    as: "font";
+    type: "font/woff2";
+    crossOrigin: "anonymous";
+  }> = [
+    {
+      rel: "preload",
+      href: OUTFIT_LATIN,
+      as: "font",
+      type: "font/woff2",
+      crossOrigin: "anonymous",
+    },
+  ];
+  const serif = pathname === "/" || pathname.startsWith("/photography");
+  if (serif) {
+    links.push({
+      rel: "preload",
+      href: NEWSREADER_LATIN,
+      as: "font",
+      type: "font/woff2",
+      crossOrigin: "anonymous",
+    });
+  }
+  if (pathname.startsWith("/photography")) {
+    links.push({
+      rel: "preload",
+      href: NEWSREADER_ITALIC,
+      as: "font",
+      type: "font/woff2",
+      crossOrigin: "anonymous",
+    });
+  }
+  return links;
+}
 
 export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "WEITA CHEN" },
-      { name: "description", content: "Still photography by WEITA CHEN." },
-      { name: "theme-color", content: "#10100e" },
-    ],
-    links: [
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: FONT },
-      { rel: "stylesheet", href: appCss },
-      { rel: "manifest", href: "/__grok/manifest.webmanifest" },
-      { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
-    ],
-  }),
-  component: () => (
-    <html lang="en" suppressHydrationWarning>
+  head: ({ matches }) => {
+    const pathname = matches[matches.length - 1]?.pathname ?? "/";
+    return {
+      meta: [
+        { charSet: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { title: "WEITA CHEN" },
+        { name: "description", content: "Still photography by WEITA CHEN." },
+        { name: "theme-color", content: "#10100e" },
+      ],
+      links: [
+        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+        ...fontPreloads(pathname),
+        { rel: "stylesheet", href: "/fonts/latin.css" },
+        { rel: "stylesheet", href: "/fonts/cjk.css", media: "print" },
+        { rel: "stylesheet", href: appCss },
+        { rel: "manifest", href: "/__grok/manifest.webmanifest" },
+        { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
+      ],
+      scripts: [
+        {
+          children:
+            '(function(){function enable(){var links=document.querySelectorAll(\'link[rel="stylesheet"][media="print"]\');for(var i=0;i<links.length;i++){if((links[i].getAttribute("href")||"").indexOf("/fonts/cjk.css")===-1)continue;(function(link){var apply=function(){link.media="all";};if(link.sheet)apply();else link.addEventListener("load",apply);})(links[i]);}}if(document.readyState==="complete")enable();else setTimeout(enable,0);})();',
+        },
+      ],
+    };
+  },
+  component: RootDocument,
+});
+
+function RootDocument() {
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+  return (
+    <html lang={documentLang(pathname)} suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>
@@ -38,5 +95,5 @@ export const Route = createRootRoute({
         <Scripts />
       </body>
     </html>
-  ),
-});
+  );
+}

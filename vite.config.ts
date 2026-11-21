@@ -12,6 +12,17 @@ import { grokPwaPlugin } from "./scripts/grok-pwa-plugin.mjs";
 import { appEnvPlugin } from "./scripts/app-env-plugin.mjs";
 import { isMigrationFile } from "./scripts/migration-plan.mjs";
 
+function photoVariantsPlugin(): Plugin {
+  return {
+    name: "photo-variants",
+    apply: "build",
+    async buildStart() {
+      const { generatePhotoVariants } = await import("./scripts/photo-variants.mjs");
+      await generatePhotoVariants();
+    },
+  };
+}
+
 /** The files `src/lib/db.ts` globs — same directory, same non-recursive scope. */
 function hasGlobbedMigrations(root: string): boolean {
   try {
@@ -165,6 +176,7 @@ export default defineConfig(({ command, isPreview }) => ({
     appEnvPlugin(),
     // PWA head + ?install=1 tutorial page; runs before Start/Nitro.
     grokPwaPlugin(),
+    photoVariantsPlugin(),
     tailwindcss(),
     tanstackStart(),
     ...(command === "build" || isPreview

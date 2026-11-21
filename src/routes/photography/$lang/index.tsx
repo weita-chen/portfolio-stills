@@ -4,12 +4,13 @@ import { heroSlideshow } from "@/content/queries";
 import { site } from "@/content/site";
 import { isLang, t, type Lang } from "@/content/types";
 import { pageHead } from "@/lib/seo";
+import { heroPreload, photoSizes } from "@/content/photos";
 
 export const Route = createFileRoute("/photography/$lang/")({
   head: ({ params }) => {
     const lang: Lang = isLang(params.lang) ? params.lang : "en";
     const description = t(site.lede, lang);
-    return pageHead({
+    const head = pageHead({
       title: `${site.name} — ${t(site.role, lang)}`,
       description,
       path: `/photography/${lang}`,
@@ -17,6 +18,8 @@ export const Route = createFileRoute("/photography/$lang/")({
       enPath: "/photography/en",
       zhPath: "/photography/zh-tw",
     });
+    const preload = heroPreload(heroSlideshow()[0]?.src, photoSizes.bleed);
+    return { meta: head.meta, links: preload ? [...head.links, preload] : head.links };
   },
   component: Home,
 });
@@ -32,7 +35,7 @@ function Home() {
       </div>
       <div className="hero-copy">
         <h1 className="display-name">
-          <img className="brand-logo" src="/brand/logo-design-01.png" alt="WEITA CHEN" />
+          <img className="brand-logo" src="/brand/logo-design-01.png" alt="WEITA CHEN" fetchPriority="low" decoding="async" />
         </h1>
         <p className="role-line">{t(site.role, current)}</p>
         <p className="lede">{t(site.lede, current)}</p>

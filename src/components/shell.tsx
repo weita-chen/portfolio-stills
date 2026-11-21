@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, Outlet, useRouterState } from "@tanstack/react-router";
 import { site } from "@/content/site";
 import { isLang, localizePath, t, type Lang } from "@/content/types";
+import { LoadMark } from "@/components/load-mark";
 
 export function Shell({ lang }: { lang: Lang }) {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
@@ -10,7 +11,6 @@ export function Shell({ lang }: { lang: Lang }) {
   const other: Lang = lang === "en" ? "zh-tw" : "en";
 
   useEffect(() => {
-    document.documentElement.lang = lang === "zh-tw" ? "zh-Hant" : "en";
     try {
       localStorage.setItem("weita-lang", lang);
     } catch {
@@ -60,7 +60,7 @@ export function Shell({ lang }: { lang: Lang }) {
         className="home-mark"
         aria-label={t(site.homeLabel, lang)}
       >
-        <img src="/brand/icon-white.png" alt="" />
+        <img src="/brand/icon-white.png" alt="" fetchPriority="low" decoding="async" />
       </Link>
       <nav className="lang-switch" aria-label={lang === "zh-tw" ? "語言" : "Language"}>
         <LangAnchor pathname={pathname} next="zh-tw" current={lang}>
@@ -131,6 +131,7 @@ export function Shell({ lang }: { lang: Lang }) {
         />
       </div>
       <span className="sr">{other}</span>
+      <LoadMark tone={isHome ? "light" : "dark"} />
     </div>
   );
 }
