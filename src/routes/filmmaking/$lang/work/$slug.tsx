@@ -2,10 +2,11 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { useEffect, useState, type ComponentType } from "react";
 import { FilmLink } from "@/features/filmmaking/components/FilmLink";
 import { FilmPlayer } from "@/features/filmmaking/components/FilmPlayer";
+import { ClipPreview } from "@/features/filmmaking/components/ClipPreview";
 import { getAdjacentProjects, getProject, type ProjectCopy } from "@/features/filmmaking/lib/content";
 import { getDictionary, isFilmLang, type FilmLang } from "@/features/filmmaking/lib/i18n";
 import { formatClock, useReducedMotion, videoFrameVars } from "@/features/filmmaking/lib/motion";
-import { heroLcpSizes, thumbSet } from "@/features/filmmaking/lib/mux";
+import { heroLcpSizes, playerThumb, thumbSet } from "@/features/filmmaking/lib/mux";
 import { displayName, pageTitle } from "@/features/filmmaking/lib/name";
 import { filmHead, muxOgImage, videoObject } from "@/features/filmmaking/lib/seo";
 
@@ -36,6 +37,7 @@ export const Route = createFileRoute("/filmmaking/$lang/work/$slug")({
             playbackId: project.playbackId,
             posterTime: project.posterTime,
             durationSec: project.durationSec,
+            maxResolution: project.maxResolution,
             year: project.year,
             path,
             lang,
@@ -43,7 +45,12 @@ export const Route = createFileRoute("/filmmaking/$lang/work/$slug")({
         : undefined,
     });
     if (!project) return head;
-    const poster = thumbSet(project.playbackId, project.posterTime, heroLcpSizes(videoFrameVars(project.aspectRatio).ar));
+    const poster = playerThumb(
+      project.playbackId,
+      project.posterTime,
+      heroLcpSizes(videoFrameVars(project.aspectRatio).ar),
+      project.posterWidth,
+    );
     return {
       ...head,
       links: [
@@ -148,6 +155,9 @@ function ProjectPage() {
             aspectRatio={project.aspectRatio}
             autoPlay={false}
             lang={lang}
+            maxResolution={project.maxResolution}
+            posterWidth={project.posterWidth}
+            playFromStart={project.playFromStart}
           />
         </div>
       </section>
@@ -294,7 +304,18 @@ function AdjacentLink({
           fetchPriority="low"
           style={{ aspectRatio: frame.aspect }}
         />
-        {bleed ? <BleedPreview playbackId={project.playbackId} armed={armed} playing={playing} /> : null}
+        {bleed ? (
+          project.previewClip ? (
+            <ClipPreview
+              playbackId={project.playbackId}
+              start={project.previewClip.start}
+              end={project.previewClip.end}
+              playing={playing && !reduced}
+            />
+          ) : (
+            <BleedPreview playbackId={project.playbackId} armed={armed} playing={playing} />
+          )
+        ) : null}
       </span>
       <span className={bleed ? "film-next-copy" : "film-prev-copy"}>
         <span className="film-kicker">{label}</span>

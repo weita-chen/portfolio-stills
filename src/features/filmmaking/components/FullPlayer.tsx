@@ -4,7 +4,7 @@ import { VideoPlayer, VideoSkin } from "@videojs/react/video";
 import "@videojs/react/video/skin.css";
 import { useEffect, useRef, useState } from "react";
 import type { FilmLang } from "../lib/i18n";
-import { muxThumbnail } from "../lib/mux";
+import { muxThumbnail, type MuxResolution } from "../lib/mux";
 
 function gestureStillOpen(): boolean {
   if (typeof navigator !== "undefined" && navigator.userActivation?.isActive) return true;
@@ -51,6 +51,9 @@ export function FullPlayer({
   autoPlay,
   lang,
   onNeedSound,
+  maxResolution = "1080p",
+  posterWidth = 960,
+  playFromStart = false,
 }: {
   playbackId: string;
   title: string;
@@ -59,12 +62,16 @@ export function FullPlayer({
   autoPlay: boolean;
   lang: FilmLang;
   onNeedSound?: () => void;
+  maxResolution?: MuxResolution;
+  posterWidth?: number;
+  playFromStart?: boolean;
 }) {
   const frame = useRef<HTMLDivElement>(null);
   const soundRef = useRef(onNeedSound);
   const [painted, setPainted] = useState(false);
   soundRef.current = onNeedSound;
-  const poster = muxThumbnail(playbackId, { time: posterTime, width: 960 });
+  const posterPx = posterWidth;
+  const poster = muxThumbnail(playbackId, { time: posterTime, width: posterPx });
 
   useEffect(() => {
     const root = frame.current;
@@ -166,8 +173,9 @@ export function FullPlayer({
           className="film-player-video"
           source={{
             playbackId,
-            poster: { time: posterTime, width: 960 },
-            engine: posterTime > 0.2 ? { hlsJs: { startPosition: posterTime } } : undefined,
+            playback: { maxResolution },
+            poster: { time: posterTime, width: posterPx },
+            engine: !playFromStart && posterTime > 0.2 ? { hlsJs: { startPosition: posterTime } } : undefined,
           }}
           crossOrigin="anonymous"
           playsInline
@@ -179,7 +187,7 @@ export function FullPlayer({
         />
         <MuxData metadata={{ video_title: title, video_id: slug }} />
       </VideoPlayer>
-      <img className="film-hold" src={poster} alt="" width={960} height={540} />
+      <img className="film-hold" src={poster} alt="" width={posterPx} height={Math.round((posterPx * 540) / 960)} />
     </div>
   );
 }

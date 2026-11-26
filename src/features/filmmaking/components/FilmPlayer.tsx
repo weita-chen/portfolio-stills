@@ -2,7 +2,7 @@ import { useEffect, useState, type ComponentType } from "react";
 import { whenIdleOrGesture } from "../lib/defer";
 import { getDictionary, type FilmLang } from "../lib/i18n";
 import { videoFrameVars } from "../lib/motion";
-import { heroLcpSizes, thumbSet } from "../lib/mux";
+import { heroLcpSizes, playerThumb, type MuxResolution } from "../lib/mux";
 
 type PlayerProps = {
   playbackId: string;
@@ -13,12 +13,15 @@ type PlayerProps = {
   autoPlay: boolean;
   lang: FilmLang;
   onNeedSound?: () => void;
+  maxResolution?: MuxResolution;
+  posterWidth?: number;
+  playFromStart?: boolean;
 };
 
 export function FilmPlayer(props: PlayerProps) {
   const [Player, setPlayer] = useState<ComponentType<PlayerProps> | null>(null);
   const frame = videoFrameVars(props.aspectRatio);
-  const poster = thumbSet(props.playbackId, props.posterTime, heroLcpSizes(frame.ar));
+  const poster = playerThumb(props.playbackId, props.posterTime, heroLcpSizes(frame.ar), props.posterWidth ?? 960);
   const width = 768;
   const height = Math.max(1, Math.round(width / frame.ar));
 

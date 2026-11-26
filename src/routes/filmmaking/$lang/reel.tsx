@@ -4,6 +4,7 @@ import { FilmPlayer } from "@/features/filmmaking/components/FilmPlayer";
 import { getShowreel } from "@/features/filmmaking/lib/content";
 import { getDictionary, isFilmLang } from "@/features/filmmaking/lib/i18n";
 import { videoFrameVars } from "@/features/filmmaking/lib/motion";
+import { heroLcpSizes, playerThumb } from "@/features/filmmaking/lib/mux";
 import { pageTitle } from "@/features/filmmaking/lib/name";
 import { filmHead, muxOgImage, videoObject } from "@/features/filmmaking/lib/seo";
 
@@ -20,7 +21,7 @@ export const Route = createFileRoute("/filmmaking/$lang/reel")({
     const title = project ? pageTitle(project.title, lang) : pageTitle(lang === "zh-tw" ? "影像集錦" : "Reel", lang);
     const description = project?.summary || project?.description || (lang === "zh-tw" ? "影像集錦。" : "Showreel.");
     const path = `/filmmaking/${lang}/reel`;
-    return filmHead({
+    const head = filmHead({
       title,
       description,
       path,
@@ -34,12 +35,34 @@ export const Route = createFileRoute("/filmmaking/$lang/reel")({
             playbackId: project.playbackId,
             posterTime: project.posterTime,
             durationSec: project.durationSec,
+            maxResolution: project.maxResolution,
             year: project.year,
             path,
             lang,
           })
         : undefined,
     });
+    if (!project) return head;
+    const poster = playerThumb(
+      project.playbackId,
+      project.posterTime,
+      heroLcpSizes(videoFrameVars(project.aspectRatio).ar),
+      project.posterWidth,
+    );
+    return {
+      ...head,
+      links: [
+        ...head.links,
+        {
+          rel: "preload",
+          as: "image",
+          href: poster.src,
+          imageSrcSet: poster.srcSet,
+          imageSizes: poster.sizes,
+          fetchPriority: "high",
+        },
+      ],
+    };
   },
   component: ReelPage,
 });
@@ -72,6 +95,9 @@ function ReelPage() {
           aspectRatio={project.aspectRatio}
           autoPlay
           lang={lang}
+          maxResolution={project.maxResolution}
+          posterWidth={project.posterWidth}
+          playFromStart={project.playFromStart}
           onNeedSound={() => setNeedSound(true)}
         />
         {needSound ? (

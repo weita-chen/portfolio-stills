@@ -1,5 +1,5 @@
 import type { FilmLang } from "./i18n";
-import { muxStream, muxThumbnail } from "./mux";
+import { muxStream, muxThumbnail, type MuxResolution } from "./mux";
 import { displayName } from "./name";
 
 export const FILM_ORIGIN = "https://weitachen.pro";
@@ -27,6 +27,7 @@ export function videoObject(opts: {
   playbackId: string;
   posterTime: number;
   durationSec?: number;
+  maxResolution?: MuxResolution;
   year: number;
   path: string;
   lang: FilmLang;
@@ -40,7 +41,7 @@ export function videoObject(opts: {
     description: opts.description,
     thumbnailUrl: muxOgImage(opts.playbackId, opts.posterTime),
     uploadDate: `${opts.year}-01-01`,
-    contentUrl: muxStream(opts.playbackId),
+    contentUrl: muxStream(opts.playbackId, { maxResolution: opts.maxResolution ?? "1080p" }),
     embedUrl: pageUrl,
     url: pageUrl,
     inLanguage: opts.lang === "zh-tw" ? "zh-Hant" : "en",

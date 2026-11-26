@@ -7,6 +7,7 @@ import { aspectBox, cardSizes, getCardLayout } from "../lib/layout";
 import { captureCardFlip } from "../lib/flip";
 import { formatClock, formatTimecode, videoFrameVars } from "../lib/motion";
 import { MuxImage } from "./MuxImage";
+import { ClipPreview } from "./ClipPreview";
 import { posterWidth } from "../lib/mux";
 
 type PreviewProps = {
@@ -103,10 +104,19 @@ export function WorkCard({
               height={box.height}
               alt=""
               priority={index === 0}
-              srcWidth={posterWidth(layout.colSpan)}
+              srcWidth={project.cardPosterWidth ?? posterWidth(layout.colSpan)}
             />
             <span className="film-card-shade" aria-hidden="true" />
-            <CardPreview playbackId={project.playbackId} armed={armed} playing={playing} />
+            {project.previewClip ? (
+              <ClipPreview
+                playbackId={project.playbackId}
+                start={project.previewClip.start}
+                end={project.previewClip.end}
+                playing={playing}
+              />
+            ) : (
+              <CardPreview playbackId={project.playbackId} armed={armed} playing={playing} />
+            )}
           </span>
         </span>
       </span>

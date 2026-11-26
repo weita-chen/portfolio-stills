@@ -2,6 +2,7 @@ import { z } from "zod";
 import projectsJson from "../content/projects.json";
 import siteJson from "../content/site.json";
 import { t, type FilmLang } from "./i18n";
+import { MUX_RESOLUTIONS, type MuxResolution } from "./mux";
 import { creditName } from "./name";
 
 const localized = z.object({
@@ -50,9 +51,18 @@ const projectSchema = z.object({
     fullPlaybackId: z.string().min(1),
     previewPlaybackId: z.string().min(1).optional(),
     previewStart: z.number().optional(),
+    previewEnd: z.number().optional(),
     aspectRatio,
     durationSec: z.number().optional(),
     posterTime: z.number().optional(),
+    /** Full-player ladder cap. Omitted projects stay at 1080p. */
+    maxResolution: z.enum(MUX_RESOLUTIONS).optional(),
+    /** Player poster width. Cards do not use this. */
+    posterWidth: z.number().int().positive().optional(),
+    /** Card still width. Omit to keep the layout size. */
+    cardPosterWidth: z.number().int().positive().optional(),
+    /** Play from 0 instead of the poster frame. */
+    playFromStart: z.boolean().optional(),
     captions: z
       .array(z.object({ lang: z.enum(["en", "zh-tw"]), label: z.string() }))
       .optional(),
@@ -130,6 +140,11 @@ export type ProjectCopy = {
   posterTime: number;
   playbackId: string;
   durationSec?: number;
+  maxResolution: MuxResolution;
+  posterWidth: number;
+  cardPosterWidth?: number;
+  previewClip?: { start: number; end: number };
+  playFromStart: boolean;
   credits: { role: string; name: string }[];
   location?: string;
   camera?: string;
@@ -187,6 +202,14 @@ function present(project: FilmProject, lang: FilmLang): ProjectCopy {
     posterTime: project.video.posterTime ?? 0,
     playbackId: project.video.fullPlaybackId,
     durationSec: project.video.durationSec,
+    maxResolution: project.video.maxResolution ?? "1080p",
+    posterWidth: project.video.posterWidth ?? 960,
+    cardPosterWidth: project.video.cardPosterWidth,
+    previewClip:
+      project.video.previewStart != null && project.video.previewEnd != null
+        ? { start: project.video.previewStart, end: project.video.previewEnd }
+        : undefined,
+    playFromStart: project.video.playFromStart ?? false,
     credits: project.credits.map((credit) => ({
       role: t(credit.role, lang),
       name: creditName(credit.name, lang),

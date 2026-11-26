@@ -2,8 +2,8 @@
   {
     "slug": "showreel",
     "title": {
-      "en": "Showreel 2026",
-      "zh-tw": "影像集錦 2026"
+      "en": "WEITACHEN Demo Reel 2024",
+      "zh-tw": "WEITACHEN Demo Reel 2024"
     },
     "client": {
       "en": "WEITA CHEN",
@@ -13,13 +13,13 @@
     "roles": [
       "director"
     ],
-    "year": 2026,
+    "year": 2024,
     "order": 0,
     "featured": true,
     "published": true,
     "summary": {
-      "en": "Showreel 2026, a placeholder film.",
-      "zh-tw": "影像集錦 2026，佔位影片。"
+      "en": "Selected work, 2024.",
+      "zh-tw": "2024 作品選集。"
     },
     "credits": [
       {
@@ -32,16 +32,19 @@
     ],
     "specs": {
       "aspectRatio": "16:9",
-      "location": {
-        "en": "Taipei",
-        "zh-tw": "台北"
-      }
+      "format": "4K · 23.976 fps"
     },
     "video": {
-      "fullPlaybackId": "a4nOgmxGWg6gULfcBbAa00gXyfcwPnAFldF8RdsNyk8M",
+      "fullPlaybackId": "xMPWhRlzq7tjyDA48L8ht00772ZcjzWJ02so02C00M2U1xQ",
       "aspectRatio": "16:9",
-      "posterTime": 5,
-      "durationSec": 90
+      "posterTime": 12,
+      "durationSec": 200.28,
+      "maxResolution": "2160p",
+      "posterWidth": 1920,
+      "cardPosterWidth": 960,
+      "previewStart": 10,
+      "previewEnd": 14,
+      "playFromStart": true
     }
   },
   {

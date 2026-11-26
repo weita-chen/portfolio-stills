@@ -222,6 +222,9 @@ export function ProjectViewer({
             aspectRatio={project.aspectRatio}
             autoPlay
             lang={lang}
+            maxResolution={project.maxResolution}
+            posterWidth={project.posterWidth}
+            playFromStart={project.playFromStart}
             onNeedSound={() => setMuted(true)}
           />
         </div>
