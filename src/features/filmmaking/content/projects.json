@@ -45,7 +45,8 @@
       "previewStart": 10,
       "previewEnd": 14,
       "playFromStart": true
-    }
+    },
+    "stillTimes": [11.8, 28, 60, 73, 124, 160, 164, 192]
   },
   {
     "slug": "night-market",
