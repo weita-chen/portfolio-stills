@@ -191,7 +191,14 @@ export function Frame({
   const variant = variantFor(photo.src);
   const style: CSSProperties = {
     ...(ratio ? { aspectRatio: `${photo.width} / ${photo.height}` } : {}),
-    ...(variant?.blur ? { backgroundImage: `url("${variant.blur}")` } : {}),
+    ...(variant?.blur
+      ? {
+          backgroundImage: `url("${variant.blur}")`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }
+      : {}),
   };
   if (photo.placeholder || !photo.src) {
     return (
