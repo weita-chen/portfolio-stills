@@ -169,24 +169,9 @@ body:has(.film-root) {
 .film-room {
   display: flex;
   align-items: center;
-  gap: 0.35rem;
 }
 
-.film-room-mark {
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  text-decoration: none;
-}
-
-.film-room-mark img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-}
-
-.film-room > a:not(.film-room-mark),
+.film-room a,
 .film-nav a,
 .film-lang a,
 .film-footer a,
@@ -195,7 +180,7 @@ body:has(.film-root) {
   text-decoration: none;
 }
 
-.film-room > a:not(.film-room-mark) {
+.film-room a {
   font-size: var(--text-film-micro);
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -206,7 +191,7 @@ body:has(.film-root) {
   transition: color 0.25s;
 }
 
-.film-room > a:not(.film-room-mark):hover {
+.film-room a:hover {
   color: var(--color-film-fg);
 }
 

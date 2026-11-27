@@ -47,14 +47,9 @@ export function Shell({ lang }: { lang: Lang }) {
       <a className="skip" href="#content">
         {t(site.skip, lang)}
       </a>
-      <Link
-        to="/photography/$lang"
-        params={{ lang }}
-        className="home-mark"
-        aria-label={t(site.homeLabel, lang)}
-      >
+      <a className="home-mark" href="/" aria-label={t(site.homeLabel, lang)}>
         <img src="/brand/icon-white.png" alt="" fetchPriority="low" decoding="async" />
-      </Link>
+      </a>
       <nav className="lang-switch" aria-label={lang === "zh-tw" ? "語言" : "Language"}>
         <LangAnchor pathname={pathname} next="zh-tw" current={lang}>
           中文
