@@ -484,14 +484,14 @@ test("strips install params from the app link", () => {
 });
 
 test("names the install page from host slug", () => {
-  assert.equal(appNameFromHost("localhost:8080"), "Grok App");
-  assert.equal(appNameFromHost("172.17.154.217:8080"), "Grok App");
+  assert.equal(appNameFromHost("localhost:8080"), "WEITA");
+  assert.equal(appNameFromHost("172.17.154.217:8080"), "WEITA");
   assert.equal(appNameFromHost("wild-race.grok.me"), "Wild Race");
 });
 
 test("rejects hosts that are not plain slugs", () => {
-  assert.equal(appNameFromHost("<script>alert(1)</script>"), "Grok App");
-  assert.equal(appNameFromHost('"><img src=x onerror=1>.grok.me'), "Grok App");
+  assert.equal(appNameFromHost("<script>alert(1)</script>"), "WEITA");
+  assert.equal(appNameFromHost('"><img src=x onerror=1>.grok.me'), "WEITA");
 });
 
 test("renders install page markup", () => {
@@ -508,11 +508,32 @@ test("escapes host-derived values in the install page", () => {
   assert.equal(html.includes("<script>alert(1)</script>"), false);
 });
 
-test("renders the manifest with the per-app name", () => {
+test("renders the manifest as WEITA with installable icons", () => {
   const manifest = JSON.parse(renderWebManifest("wild-race.grok.me"));
-  assert.equal(manifest.name, "Wild Race");
-  assert.equal(manifest.short_name, "Wild Race");
-  assert.equal(manifest.icons[0].src, "/__grok/icon-180.png");
+  assert.equal(manifest.name, "WEITA");
+  assert.equal(manifest.short_name, "WEITA");
+  assert.equal(manifest.start_url, "/");
+  assert.equal(manifest.display, "standalone");
+  const srcs = manifest.icons.map((icon) => icon.src);
+  assert.ok(srcs.includes("/icons/icon-192.png"));
+  assert.ok(srcs.includes("/icons/icon-512.png"));
+  assert.ok(srcs.includes("/icons/icon-512-maskable.png"));
+  assert.equal(manifest.icons.find((icon) => icon.purpose === "maskable").src, "/icons/icon-512-maskable.png");
+});
+
+test("does not inject a second manifest or apple-touch-icon when the document already has them", () => {
+  const html = `<html><head>
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="WEITA">
+    <title>WEITA CHEN</title>
+  </head></html>`;
+  const out = injectGrokPwaHead(html);
+  assert.equal(out.split('rel="manifest"').length - 1, 1);
+  assert.equal(out.split('rel="apple-touch-icon"').length - 1, 1);
+  assert.match(out, /href="\/manifest\.webmanifest"/);
+  assert.doesNotMatch(out, /__grok\/manifest/);
+  assert.doesNotMatch(out, /Grok App|Grok Build/);
 });
 
 // Tripwires: the deployed-app path only works if Nitro scans server/ — an

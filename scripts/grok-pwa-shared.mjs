@@ -6,7 +6,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
-export const DEFAULT_APP_NAME = "Grok App";
+export const DEFAULT_APP_NAME = "WEITA";
 export const OG_SERVICE_URL_DEFAULT = "https://og.grok.me";
 export const OG_SITE_REL_PATH = "src/lib/og/site.json";
 
@@ -157,12 +157,12 @@ export function renderInstallPageHtml(template, { host, url } = {}) {
     .replaceAll("{{APP_URL}}", escapeHtml(stripInstallParams(url)));
 }
 
-export function renderWebManifest(hostHeader) {
-  const name = appNameFromHost(hostHeader);
+export function renderWebManifest(_hostHeader) {
+  // Installed app name is always WEITA on this site, including preview hosts.
   return JSON.stringify(
     {
-      name,
-      short_name: name,
+      name: "WEITA",
+      short_name: "WEITA",
       id: "/",
       start_url: "/",
       scope: "/",
@@ -171,9 +171,22 @@ export function renderWebManifest(hostHeader) {
       theme_color: "#000000",
       icons: [
         {
-          src: "/__grok/icon-180.png",
-          sizes: "180x180",
+          src: "/icons/icon-192.png",
+          sizes: "192x192",
           type: "image/png",
+          purpose: "any",
+        },
+        {
+          src: "/icons/icon-512.png",
+          sizes: "512x512",
+          type: "image/png",
+          purpose: "any",
+        },
+        {
+          src: "/icons/icon-512-maskable.png",
+          sizes: "512x512",
+          type: "image/png",
+          purpose: "maskable",
         },
       ],
     },
@@ -186,11 +199,16 @@ export function grokPwaHeadTags(appName = DEFAULT_APP_NAME) {
   return [
     // Standalone display comes from the manifest ("display": "standalone");
     // the legacy *-web-app-capable metas it replaces are deliberately absent.
-    ["manifest", '<link rel="manifest" href="/__grok/manifest.webmanifest">'],
-    ["apple-touch-icon", '<link rel="apple-touch-icon" href="/__grok/icon-180.png">'],
+    ["manifest", '<link rel="manifest" href="/manifest.webmanifest">'],
+    ["apple-touch-icon", '<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">'],
     [
       "apple-mobile-web-app-title",
       `<meta name="apple-mobile-web-app-title" content="${escapeHtml(appName)}">`,
+    ],
+    ["apple-mobile-web-app-capable", '<meta name="apple-mobile-web-app-capable" content="yes">'],
+    [
+      "application-name",
+      `<meta name="application-name" content="${escapeHtml(appName)}">`,
     ],
     [
       "apple-mobile-web-app-status-bar-style",
@@ -450,8 +468,8 @@ export function injectGrokPwaHead(html, ctx = {}) {
 
   const missing = grokPwaHeadTags(appName)
     .filter(([key]) => {
-      if (key === "manifest") return !next.includes('href="/__grok/manifest.webmanifest"');
-      if (key === "apple-touch-icon") return !next.includes('href="/__grok/icon-180.png"');
+      if (key === "manifest") return !/rel=["']manifest["']/.test(next);
+      if (key === "apple-touch-icon") return !/rel=["']apple-touch-icon["']/.test(next);
       return !next.includes(`name="${key}"`);
     })
     .map(([, tag]) => tag);

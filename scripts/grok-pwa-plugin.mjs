@@ -42,6 +42,24 @@ function sendHtml(res, html) {
   res.end(body);
 }
 
+function forceWebmanifestMime(middlewares) {
+  middlewares.use((req, res, next) => {
+    const pathOnly = (req.url ?? "").split("?", 1)[0] ?? "";
+    if (!pathOnly.endsWith(".webmanifest")) {
+      next();
+      return;
+    }
+    const original = res.setHeader.bind(res);
+    res.setHeader = (key, value) => {
+      if (String(key).toLowerCase() === "content-type") {
+        return original("Content-Type", "application/manifest+json; charset=utf-8");
+      }
+      return original(key, value);
+    };
+    next();
+  });
+}
+
 function serveGrokPwa(middlewares) {
   middlewares.use((req, res, next) => {
     const rawUrl = req.url ?? "";
@@ -175,10 +193,12 @@ export function grokPwaPlugin() {
       // Registered directly (not in a returned post-hook) so both run BEFORE
       // TanStack Start's SSR middleware, like the auth-popup plugin.
       serveGrokPwa(server.middlewares);
+      forceWebmanifestMime(server.middlewares);
       wrapHtmlResponses(server.middlewares, root);
     },
     configurePreviewServer(server) {
       serveGrokPwa(server.middlewares);
+      forceWebmanifestMime(server.middlewares);
       // Post-hook: preview registers compression between the direct hooks and
       // the post-hooks, and the injector must wrap AFTER compression so it
       // sees plaintext HTML (compression then compresses the injected output).

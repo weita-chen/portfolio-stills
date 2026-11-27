@@ -1,6 +1,7 @@
 import { createRootRoute, HeadContent, Outlet, Scripts, useRouterState } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
+import { PwaRegister } from "@/components/pwa-register";
 import appCss from "../styles.css?url";
 
 const OUTFIT_LATIN = "/fonts/latin/QGYvz_MVcBeNP4NJtEtq.woff2";
@@ -58,16 +59,24 @@ export const Route = createRootRoute({
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         { title: "WEITA CHEN" },
         { name: "description", content: "Still photography by WEITA CHEN." },
-        { name: "theme-color", content: "#10100e" },
+        { name: "theme-color", content: "#000000" },
+        { name: "application-name", content: "WEITA" },
+        { name: "apple-mobile-web-app-title", content: "WEITA" },
+        { name: "apple-mobile-web-app-capable", content: "yes" },
+        { name: "mobile-web-app-capable", content: "yes" },
+        { name: "apple-mobile-web-app-status-bar-style", content: "black" },
       ],
       links: [
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+        { rel: "icon", type: "image/png", sizes: "32x32", href: "/icons/favicon-32.png" },
+        { rel: "icon", type: "image/png", sizes: "16x16", href: "/icons/favicon-16.png" },
+        { rel: "shortcut icon", href: "/favicon.ico" },
         ...fontPreloads(pathname),
         { rel: "stylesheet", href: "/fonts/latin.css" },
         { rel: "stylesheet", href: "/fonts/cjk.css", media: "print" },
         { rel: "stylesheet", href: appCss },
-        { rel: "manifest", href: "/__grok/manifest.webmanifest" },
-        { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
+        { rel: "manifest", href: "/manifest.webmanifest" },
+        { rel: "apple-touch-icon", href: "/icons/apple-touch-icon.png" },
       ],
       scripts: [
         {
@@ -89,6 +98,7 @@ function RootDocument() {
       </head>
       <body>
         <PreviewHostBridge />
+        <PwaRegister />
         <AuthProvider>
           <Outlet />
         </AuthProvider>
