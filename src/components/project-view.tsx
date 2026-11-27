@@ -174,6 +174,14 @@ function Section({
   const left = photoById(project, leftId);
   const right = photoById(project, rightId);
   if (!left || !right) return null;
+  if (section.type === "pair" && isPortrait(left) && isPortrait(right)) {
+    return (
+      <div className={section.offset ? `section-pair offset-${section.offset}` : "section-pair"}>
+        <Clickable photo={left} lang={lang} sizes={photoSizes.split} onOpen={onOpen} />
+        <Clickable photo={right} lang={lang} sizes={photoSizes.split} onOpen={onOpen} />
+      </div>
+    );
+  }
   return (
     <>
       <ImageFigure photo={left} lang={lang} align="left" onOpen={onOpen} />
