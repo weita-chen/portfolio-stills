@@ -27,6 +27,8 @@ export const site = {
   } satisfies Copy,
   viewWork: { en: "View the work", "zh-TW": "查看作品" } satisfies Copy,
   contactCta: { en: "Contact", "zh-TW": "聯絡" } satisfies Copy,
+  filmsInvite: { en: "Wanna see films?", "zh-TW": "想看影片？" } satisfies Copy,
+  filmsInviteLink: { en: "Here you go.", "zh-TW": "往這裡走。" } satisfies Copy,
   pause: { en: "Pause", "zh-TW": "暫停" } satisfies Copy,
   play: { en: "Play", "zh-TW": "播放" } satisfies Copy,
   menu: { en: "Open menu", "zh-TW": "開啟選單" } satisfies Copy,

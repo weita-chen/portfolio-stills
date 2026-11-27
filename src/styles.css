@@ -262,8 +262,13 @@ body:has(.frame-root[data-home="true"]) {
 
 .frame-root[data-home="true"] .role-line,
 .frame-root[data-home="true"] .cta-quiet,
+.frame-root[data-home="true"] .films-invite,
 .frame-root[data-home="true"] .lang-switch a {
   color: #6f675f;
+}
+
+.frame-root[data-home="true"] .films-invite a:hover {
+  color: #141414;
 }
 
 .frame-root[data-home="true"] .lang-switch {
@@ -337,6 +342,26 @@ body:has(.frame-root[data-home="true"]) {
 
 .cta-quiet {
   color: var(--color-muted);
+}
+
+.films-invite {
+  margin: 1.05rem 0 0;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.45;
+  color: var(--color-muted);
+}
+
+.films-invite a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.films-invite a:hover {
+  color: var(--color-ink, #141414);
 }
 
 .page {

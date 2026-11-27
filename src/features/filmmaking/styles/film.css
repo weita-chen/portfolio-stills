@@ -47,7 +47,6 @@
   --film-space-section-m: clamp(3rem, 7vw, 5rem);
   --film-space-section-l: clamp(4rem, 10vw, 7rem);
   --radius-film-card: 0.375rem;
-  --brand-h: 36px;
   min-height: 100svh;
   background: var(--color-film-bg);
   color: var(--color-film-fg);
@@ -152,17 +151,19 @@ body:has(.film-root) {
   margin-left: auto;
 }
 
-.film-brand {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
+.film-home-mark {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
   text-decoration: none;
 }
 
-.film-brand img {
-  height: var(--brand-h);
-  width: auto;
-  display: block;
+.film-home-mark img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
 }
 
 .film-room {
@@ -689,10 +690,6 @@ body:has(.film-root) {
 }
 
 @media (max-width: 767px) {
-  .film-root {
-    --brand-h: 28px;
-  }
-
   .film-menu-btn {
     display: inline-flex;
     align-items: center;

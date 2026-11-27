@@ -47,6 +47,10 @@ function Home() {
             {t(site.contactCta, current)}
           </Link>
         </p>
+        <p className="films-invite">
+          {t(site.filmsInvite, current)}{" "}
+          <a href={`/filmmaking/${current}`}>{t(site.filmsInviteLink, current)}</a>
+        </p>
       </div>
     </main>
   );
